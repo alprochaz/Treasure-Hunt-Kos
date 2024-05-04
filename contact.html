@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt Kos</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="obsah">
+            <div class="logo">
+                <img class="logo__svg" src="/images/icons/treasure.svg" alt="">
+                <span class="logo__name">Treasure <br> Hunt Kos</span> 
+            </div>
+            <div class="menu">
+                MENU
+            </div>
+        </div> 
+    </header>
+    
+    <main>
+
+        <section class="bottle-background">
+
+            <h1>Zašlete nám vzkaz v láhvi </h1>
+
+<!-- zde jeste nutne vyresit posilani!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+            <form class="contact" action="sendmail.php" method="post">    
+                <div class="form-field"> 
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" placeholder="Váš email" required >
+                </div>
+
+                <div class="form-field">
+                    <label for="name">Jméno *</label>
+                    <input type="text" id="name" name="name" placeholder="Vaše jméno..." required >
+                </div>
+
+                <!-- <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" > -->
+
+                <div class="form-field">
+                    <label for="zprava">Zpráva *</label>
+                    <textarea type="text" id="zprava"  name="zprava" placeholder="Vaše zpráva..." required></textarea>
+                </div>
+
+                <!-- <label for="testik">How much is <small> (Anti-spam) </small>*</label>
+                <p class="next_row"><strong>ten + five = </strong><input id="small-input" type="number" max="99" id="testik" name="testik" required> </p>
+     -->
+    
+              
+                <button class="email" type="submit">Odeslat</button>
+
+                <p>* Povinná pole</p>
+    
+    
+                <!-- <p class="nosee">
+                  <label for="mail">Ihre eMail wird nicht abgefragt, tragen Sie auch hier bitte NICHTS ein:</label> <input id="mail" name="mail" />
+                </p> -->
+    
+                <?php
+                  if(isset($_POST['mail']) && $_POST['mail']) {  # nicht eintragen, sondern Mitteilung über Spamverdacht
+                  }
+                ?>
+            </form>
+
+    
+
+
+        </section>
+
+
+
+
+    </main>
+
+    <footer>
+        © Treasure Hunt Kos 2024
+    </footer>
+
+</body>
+</html>
