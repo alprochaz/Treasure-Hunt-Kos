@@ -11,6 +11,9 @@ module.exports = function(eleventyConfig) {
   // Zkopirovat script do _site, aby fungovalo hamburger menu
   eleventyConfig.addPassthroughCopy("script-menu.js");
 
+  // Poslani favicon - zatim jen testuji
+  eleventyConfig.addPassthroughCopy("favicon.ico"); 
+
   return {
     // možné formáty šablon
     templateFormats: ["njk", "html", "md", "liquid"],
