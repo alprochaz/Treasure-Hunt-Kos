@@ -136,7 +136,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
 }
 @media screen and (min-width: 760px) {
   .header {
@@ -149,6 +148,7 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
+  padding-left: 20px;
 }
 .logo__image {
   height: 60px;
