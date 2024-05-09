@@ -1,0 +1,81 @@
+@use 'colors';
+
+.contact {
+    color: white;
+}
+
+form {
+    width: 100%;
+}
+
+.form-field {
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 760px) {   
+        width: 70%;
+    }
+}
+
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 17px;
+    display: block;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    font-family: "Urbanist", sans-serif;
+
+  }
+
+input[type=text], input[type=email] {
+
+    @media screen and (min-width: 760px) {
+        width: 300px;
+    }
+}
+
+label {
+    font-size: 1em;
+    padding: 0 0 5px 0px;
+    display: block;
+  
+  }
+
+textarea {
+    height: 120px;
+    resize: vertical;
+  }
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus { /*aktivni pole se zabarvi*/
+    background-color: #eee;
+    outline: 2px solid colors.$primary;
+  }
+
+.email {
+    cursor: pointer;
+    display: block;
+    margin-top: 40px;
+  }
+  
+
+  /*----Email send page----*/
+
+  .email-send {
+    height: 90vh;
+  }
+
+  .wrapper-email-send {
+    padding-top: 20px;
+  }
+
+  .thank-you {
+    color: white;
+    text-align: center;
+
+    @media screen and (min-width: 760px) {
+      text-align: left;
+    }
+  }
+
+

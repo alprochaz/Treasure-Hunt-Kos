@@ -1,0 +1,57 @@
+@use 'colors';
+
+.hero {    
+    display: grid;
+    grid-template-rows: auto;
+
+    @media screen and (min-width: 760px) {    
+        grid-template-columns: 50% 50%;
+        background-color: colors.$secondary;
+    }
+
+    @media screen and (min-width: 1000px) {    
+        grid-template-columns: 40% 60%;       
+    }
+    
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (min-width: 760px) {    
+            align-items: flex-start;
+            padding-block: 20px;
+        }
+    }
+
+}
+
+.blue-card {
+    background-color: colors.$primary-transparent;
+
+    padding: 30px 20px;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    line-height: 1.25;
+
+    @media screen and (min-width: 760px) {    
+        background-color: transparent;
+        color: white;
+        text-align: left;
+        padding: 0;
+    }
+
+    &__title {
+        font-size: 2.8em;
+        margin-top: 0;    
+    }
+    
+    &__description {
+        font-size: 32px;
+    }
+
+}
+
+

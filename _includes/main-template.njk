@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{ title }} </title>
+
+    <link rel="stylesheet" href="/CSS/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <div class="logo">
+                <div class="logo__image">  
+                    <a class="logo__image-link" href="/"> <img class="logo__svg" src="/images/icons/treasure.svg" alt=""> </a>
+                </div>
+                <div class="logo__name"> 
+                    <a class="logo__link" href="/"> Treasure <br> Hunt Kos </a>
+                </div>
+            </div>
+
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="/games/" class="menu__link">Vybrat hru</a></li>
+                    <li class="menu__item"><a href="/faq/" class="menu__link">FAQ</a></li>
+                    <li class="menu__item"><a href="/contact/" class="menu__link">Kontakt</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">EN/CZ</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger"> 
+                <span class="bar"></span>     <span class="bar"></span>     <span class="bar"></span> 
+              </div>
+
+        </div> 
+    </header>
+    
+    <main>
+
+
+        {{content | safe}}
+
+
+    </main>
+
+    <footer>
+        © Treasure Hunt Kos 2024
+    </footer>
+
+<!-- Java Script pro menu -->
+<script src="/script-menu.js"></script> 
+
+</body>
+</html>        

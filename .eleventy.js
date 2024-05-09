@@ -8,6 +8,9 @@ module.exports = function(eleventyConfig) {
 	// Zkopírovat css/ to _site/css/
 	eleventyConfig.addPassthroughCopy("CSS");
 
+  // Zkopirovat script do _site, aby fungovalo hamburger menu
+  eleventyConfig.addPassthroughCopy("script-menu.js");
+
   return {
     // možné formáty šablon
     templateFormats: ["njk", "html", "md", "liquid"],

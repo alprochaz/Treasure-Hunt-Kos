@@ -1,0 +1,36 @@
+@use 'colors';
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (min-width: 760px) {    
+        align-items: flex-start;
+        padding-block: 20px;
+    }
+}
+
+.blue-container {
+    background-color: colors.$primary-transparent;
+    padding: 30px 20px;
+    border-radius: 30px;
+    color: white;
+}
+
+.question {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin: 0;
+
+}
+
+.answer {
+    margin: 0;
+
+}
+
+.answer + .question {       /*aby mely otazky odstup od predesle odpovedi*/
+    margin-top: 20px;
+}

@@ -1,0 +1,96 @@
+@use 'colors';
+
+.choose-game {
+    &__title {
+        color: #111111;
+    
+    }
+    
+    &__container {
+        display: grid;
+        justify-items: center;
+        gap: 40px;
+
+        @media screen and (min-width: 760px) {    
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+}
+
+.game {
+    width: 400px;
+    height: 470px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding-block: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+    background-size: cover;
+    &__title {
+        font-size: 2.7em;
+        margin-block: 0;
+    }
+    
+    &__description {
+        background-color: colors.$secondary;
+    }
+    
+    &__text {
+        margin-block: 0.5em;
+    }
+    
+    &--marmari {
+        background-image: url(/images/foto/marmari.jpg);
+    }
+    
+    &--kardamena {
+        background-image: url(/images/foto/kardamena.jpg);
+    
+    }
+}
+
+
+
+/*------------------- Marmari a Kardamena-------------------*/
+.about-game__title {
+    text-align: left;
+    color: #111111;
+}
+
+.about-game__intro {
+    margin-bottom: 40px;
+}
+
+.info-container {
+    display: grid;
+    gap: 20px;
+
+    @media screen and (min-width: 760px) { 
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    &__svg {
+        width: 60px;
+    
+        animation: shake 4s;
+        animation-iteration-count: infinite;
+       
+        &--color {
+            fill: colors.$primary;  
+        }
+    }
+    
+}

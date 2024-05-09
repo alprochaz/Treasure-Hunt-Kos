@@ -7,7 +7,7 @@ html {
 *, ::after, ::before {
   box-sizing: inherit;
 }
- 
+
 body {
   margin: 0;
   font-size: 20px;
@@ -19,20 +19,6 @@ body {
   }
 }
 
-:root {
-  --primary: #2271cd;
-  --primary-transparent: rgb(34, 113, 205, 0.7); /*pruhledna karta*/
-  --pozadi: #8EB1BB;
-  --light-gray: #EFEDED;
-  --header: #7F6F65;
-}
-
-header {
-  height: 60px;
-  background-color: var(--header);
-  color: white;
-}
-
 @media screen and (min-width: 760px) {
   main {
     background-color: white;
@@ -41,38 +27,6 @@ header {
     margin-top: 20px;
     box-shadow: 0px 0px 20px 1px rgb(221, 221, 221);
   }
-}
-
-.obsah {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 20px;
-}
-@media screen and (min-width: 760px) {
-  .obsah {
-    max-width: 1000px;
-    margin-inline: auto;
-  }
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.logo__svg {
-  width: 60px;
-  height: 60px;
-}
-.logo__svg img {
-  display: inline-block;
-}
-.logo__name {
-  font-weight: 600;
-  text-transform: uppercase;
-  line-height: 1;
-  font-size: 0.9em;
 }
 
 section {
@@ -131,14 +85,194 @@ h2 {
   }
 }
 
+button {
+  display: inline-block;
+  margin-top: 2.4em;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: 0px;
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  background-color: #2271cd;
+}
+
+.how-to-play {
+  background-color: #2271cd;
+  color: white;
+}
+
+ol {
+  padding: 0 20px;
+  margin: 0;
+}
+
+footer {
+  height: 60px;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 0.8em;
+  background-color: #7F6F65;
+  color: white;
+  text-align: center;
+}
+
+.bottle-background + .how-to-play { /*aby byla bila mezera mezi foto pozadim a modrym pozadim*/
+  margin-top: 20px;
+}
+
+/*---------------------- TABLET ---------------------------------------------*/
+/* ------------------------- PC ---------------------------------------- */
+/* ------------------------- PC nad 960---------------------------------------- */
+header {
+  height: 60px;
+  background-color: #7F6F65;
+  color: white;
+}
+
+.header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+@media screen and (min-width: 760px) {
+  .header {
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo__image {
+  height: 60px;
+}
+.logo__image-link {
+  display: inline-block;
+  max-height: 60px;
+}
+.logo__svg {
+  max-height: 60px;
+}
+.logo__name {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  line-height: 1;
+}
+.logo__link {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.menu__item {
+  margin: 0;
+  padding: 0;
+}
+.menu__item:not(:last-child) {
+  border-right: 1px solid silver;
+}
+@media screen and (min-width: 700px) {
+  .menu__item:hover {
+    background-color: #73655c;
+  }
+}
+.menu__link {
+  display: inline-block;
+  padding: 20px 20px;
+  color: white;
+  line-height: 1;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+@media screen and (min-width: 700px) {
+  .menu__link:visited {
+    background-color: red;
+  }
+}
+
+/*-------- Hamburger menu ---------------*/
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+/*--------- MENU pokud bude obrazovka mensi nez 700px-------------*/
+@media (max-width: 700px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .menu__list {
+    position: absolute;
+    left: -100%;
+    top: 60px;
+    gap: 5px;
+    flex-direction: column;
+    background-color: #8EB1BB;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 5000;
+  }
+  .menu__item {
+    border: none;
+    background-color: #EFEDED;
+  }
+  .menu__link {
+    padding: 15px 30%;
+    color: black;
+  }
+  .menu__list.active {
+    left: 0;
+  }
+}
 .hero {
   display: grid;
   grid-template-rows: auto;
 }
 @media screen and (min-width: 760px) {
   .hero {
+    grid-template-columns: 50% 50%;
+    background-color: #7F6F65;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .hero {
     grid-template-columns: 40% 60%;
-    background-color: var(--header);
   }
 }
 .hero__left {
@@ -155,7 +289,7 @@ h2 {
 }
 
 .blue-card {
-  background-color: var(--primary-transparent);
+  background-color: rgba(34, 114, 206, 0.7);
   padding: 30px 20px;
   border-radius: 30px;
   color: white;
@@ -176,19 +310,6 @@ h2 {
 }
 .blue-card__description {
   font-size: 32px;
-}
-
-button {
-  display: inline-block;
-  margin-top: 2.4em;
-  padding: 10px 30px;
-  border-radius: 20px;
-  border: 0px;
-  color: white;
-  font-size: 32px;
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
-  background-color: var(--primary);
 }
 
 .reviews-container {
@@ -238,59 +359,13 @@ button {
   animation-iteration-count: infinite;
 }
 .review__svg--color {
-  fill: var(--primary);
+  fill: #2271cd;
 }
 .review__svg:hover {
   fill: #cd22a8;
   stroke: #cd22a8; /*ikona dopisu je jina a jenom fill na ni nefunguje*/
 }
 
-.info-container {
-  display: grid;
-  gap: 20px;
-}
-@media screen and (min-width: 760px) {
-  .info-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.info {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.info__svg {
-  width: 60px;
-  animation: shake 4s;
-  animation-iteration-count: infinite;
-}
-.info__svg--color {
-  fill: var(--primary);
-}
-
-.how-to-play {
-  background-color: var(--primary);
-  color: white;
-}
-
-ol {
-  padding: 0 20px;
-  margin: 0;
-}
-
-footer {
-  height: 60px;
-  padding: 20px;
-  margin-top: 20px;
-  font-size: 0.8em;
-  background-color: var(--header);
-  color: white;
-  text-align: center;
-}
-
-/*-------------------------------GAMES----------------------------*/
 .choose-game__title {
   color: #111111;
 }
@@ -322,7 +397,7 @@ footer {
   margin-block: 0;
 }
 .game__description {
-  background-color: var(--header);
+  background-color: #7F6F65;
 }
 .game__text {
   margin-block: 0.5em;
@@ -344,9 +419,29 @@ footer {
   margin-bottom: 40px;
 }
 
-/*------------------------- FAQ ------------------------------*/
-.white {
-  color: white;
+.info-container {
+  display: grid;
+  gap: 20px;
+}
+@media screen and (min-width: 760px) {
+  .info-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.info__svg {
+  width: 60px;
+  animation: shake 4s;
+  animation-iteration-count: infinite;
+}
+.info__svg--color {
+  fill: #2271cd;
 }
 
 .faq {
@@ -363,7 +458,7 @@ footer {
 }
 
 .blue-container {
-  background-color: var(--primary-transparent);
+  background-color: rgba(34, 114, 206, 0.7);
   padding: 30px 20px;
   border-radius: 30px;
   color: white;
@@ -383,11 +478,6 @@ footer {
   margin-top: 20px;
 }
 
-.bottle-background + .how-to-play { /*aby byla bila mezera mezi foto pozadim a modrym pozadim*/
-  margin-top: 20px;
-}
-
-/*------------------- Contact ------------------*/
 .contact {
   color: white;
 }
@@ -435,7 +525,7 @@ textarea {
 
 input[type=text]:focus, input[type=email]:focus, textarea:focus { /*aktivni pole se zabarvi*/
   background-color: #eee;
-  outline: 2px solid var(--primary);
+  outline: 2px solid #2271cd;
 }
 
 .email {
@@ -444,6 +534,21 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus { /*aktivni pole
   margin-top: 40px;
 }
 
-/*---------------------- TABLET ---------------------------------------------*/
-/* ------------------------- PC ---------------------------------------- */
-/* ------------------------- PC nad 960---------------------------------------- *//*# sourceMappingURL=style.css.map */
+/*----Email send page----*/
+.email-send {
+  height: 90vh;
+}
+
+.wrapper-email-send {
+  padding-top: 20px;
+}
+
+.thank-you {
+  color: white;
+  text-align: center;
+}
+@media screen and (min-width: 760px) {
+  .thank-you {
+    text-align: left;
+  }
+}/*# sourceMappingURL=style.css.map */
