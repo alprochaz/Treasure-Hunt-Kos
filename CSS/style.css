@@ -368,29 +368,39 @@ header {
 
 .choose-game__title {
   color: #111111;
+  margin-bottom: 60px;
 }
 .choose-game__container {
   display: grid;
   justify-items: center;
   gap: 40px;
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 960px) {
   .choose-game__container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.choose-game__link {
+  text-decoration: none;
+}
 
 .game {
-  width: 400px;
+  width: 100%;
+  max-width: 380px;
   height: 470px;
   border-radius: 10px;
   color: white;
   text-align: center;
   padding-block: 30px;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-size: cover;
+}
+@media screen and (min-width: 960px) {
+  .game {
+    width: 380px;
+  }
 }
 .game__title {
   font-size: 2.7em;
