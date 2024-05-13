@@ -85,8 +85,9 @@ h2 {
   }
 }
 
-button {
+.button {
   display: inline-block;
+  text-decoration: none;
   margin-top: 2.4em;
   padding: 10px 30px;
   border-radius: 20px;
@@ -95,6 +96,7 @@ button {
   font-size: 32px;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
+  line-height: normal;
   background-color: #2271cd;
 }
 
@@ -380,9 +382,6 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.choose-game__link {
-  text-decoration: none;
-}
 
 .game {
   width: 100%;
@@ -391,6 +390,7 @@ header {
   border-radius: 10px;
   color: white;
   text-align: center;
+  text-decoration: none;
   padding-block: 30px;
   background-size: cover;
   display: flex;

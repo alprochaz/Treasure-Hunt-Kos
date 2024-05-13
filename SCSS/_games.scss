@@ -17,10 +17,6 @@
         }
     }
 
-    &__link {
-        text-decoration: none;
-    }
-
 }
 
 .game {
@@ -30,6 +26,7 @@
     border-radius: 10px;
     color: white;
     text-align: center;
+    text-decoration: none;
     padding-block: 30px;
     background-size: cover;
 

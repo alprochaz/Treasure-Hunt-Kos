@@ -85,9 +85,9 @@ h2 {
 }
 
 
-button {
+.button {
 	display: inline-block;
-
+    text-decoration: none;
     margin-top: 2.4em;
 	padding: 10px 30px;
 	border-radius: 20px;
@@ -96,6 +96,7 @@ button {
     font-size: 32px;
 	font-weight: 500;
 	font-family: "Montserrat", sans-serif;
+    line-height: normal;
 	background-color: colors.$primary;
 }
 
