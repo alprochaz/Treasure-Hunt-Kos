@@ -97,11 +97,11 @@ h2 {
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   line-height: normal;
-  background-color: #2271cd;
+  background-color: rgb(34, 114, 206);
 }
 
 .how-to-play {
-  background-color: #2271cd;
+  background-color: rgb(34, 114, 206);
   color: white;
 }
 
@@ -361,7 +361,7 @@ header {
   animation-iteration-count: infinite;
 }
 .review__svg--color {
-  fill: #2271cd;
+  fill: rgb(34, 114, 206);
 }
 .review__svg:hover {
   fill: #cd22a8;
@@ -419,6 +419,17 @@ header {
   background-image: url(/images/foto/kardamena.jpg);
 }
 
+.kos-map {
+  display: block;
+  margin-inline: auto;
+}
+.kos-map__button {
+  fill: #2272ce;
+}
+.kos-map__button:hover {
+  fill: #1b569a;
+}
+
 /*------------------- Marmari a Kardamena-------------------*/
 .about-game__title {
   text-align: left;
@@ -451,7 +462,7 @@ header {
   animation-iteration-count: infinite;
 }
 .info__svg--color {
-  fill: #2271cd;
+  fill: rgb(34, 114, 206);
 }
 
 .faq {
@@ -535,7 +546,7 @@ textarea {
 
 input[type=text]:focus, input[type=email]:focus, textarea:focus { /*aktivni pole se zabarvi*/
   background-color: #eee;
-  outline: 2px solid #2271cd;
+  outline: 2px solid rgb(34, 114, 206);
 }
 
 .email {

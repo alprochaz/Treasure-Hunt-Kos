@@ -61,6 +61,22 @@
     }
 }
 
+.kos-map {
+    display: block;
+    margin-inline: auto; 
+    
+    &__button {
+        fill:#2272ce;
+    
+        &:hover {
+            fill: #1b569a; 
+        }
+    }
+}
+
+
+
+
 
 
 /*------------------- Marmari a Kardamena-------------------*/

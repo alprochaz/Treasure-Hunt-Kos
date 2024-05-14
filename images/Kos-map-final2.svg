@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 1250 907.5"
+   height="907.5"
+   width="1250"
+   version="1.1"
+   id="svg4134">
+  <metadata
+     id="metadata4140">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4138" />
+  <path
+     id="kos"
+     d="m 295.6182,829.50936 c -22.03353,-1.16159 -32.44556,-26.41478 -51.23993,-35.54903 -13.46648,-22.17255 -35.46059,-38.48004 -51.06658,-57.62861 -12.13659,-28.51662 -14.58625,-59.72656 -4.15856,-89.30735 3.41005,-18.55306 -21.65317,-33.12148 -6.70596,-51.64771 11.50506,-37.37856 58.10153,-59.59109 94.68808,-54.74567 39.20856,18.35059 76.27877,0.30182 93.43745,-37.63474 13.74158,-17.38987 28.49071,-34.21529 33.8414,-56.3059 1.7214,-22.5276 23.49767,-25.79496 36.24336,-40.2699 23.95784,-33.44167 47.82575,-70.71333 79.80595,-95.91797 40.22588,2.43888 68.22189,-31.29334 100.1009,-50.37159 37.60025,-24.31042 72.58322,-63.54719 122.10515,-51.20943 39.94054,5.05871 81.35335,0.94634 114.3648,-24.17935 29.46005,-16.28432 61.88392,-56.96627 90.72275,-56.87352 -5.05575,23.2311 12.21091,40.71004 26.78111,56.35383 29.30068,26.70336 70.20848,12.48165 104.98168,21.7575 7.0755,25.45534 21.0568,48.7579 23.8509,75.45364 -20.0165,19.97709 -37.6853,45.22707 -67.5969,50.20189 -68.83837,22.21147 -139.13044,40.90164 -206.81802,66.21569 -37.41729,18.04779 -74.50109,37.10472 -113.77872,50.86512 -27.90473,47.09066 -64.92229,87.32021 -102.73733,126.58579 -8.07314,17.95898 -25.91144,16.31104 -42.16236,17.90531 -33.90061,-17.6255 -71.66852,-24.62871 -108.93364,-31.97 -21.94976,4.70371 -45.76363,5.8317 -66.60854,12.6547 -13.82468,11.30694 -22.97409,32.40852 -43.53584,29.60135 -20.47577,-0.35567 -42.88585,15.84821 -49.1155,33.67393 -3.12049,26.03604 42.76304,38.92393 26.88538,64.05449 -0.22414,17.33073 -24.26827,10.17665 -23.94897,26.29057 -5.69988,29.2579 -18.07682,66.37048 8.8271,88.22936 -1.74,9.384 -4.99997,21.32663 -18.22916,13.7676 z m 7.35141,-10.5337 c -14.6407,-12.58554 -18.30372,-27.86395 -14.32264,-46.09416 -1.67438,-34.85168 9.95028,-62.59061 34.64034,-82.22949 -20.4679,-22.7438 -50.49609,-63.56061 -8.65807,-83.33025 11.54416,-11.5529 26.4113,-13.92035 42.00437,-14.07895 14.25141,-2.76317 21.68946,-19.90507 33.17176,-28.51211 23.49961,-6.08379 49.38957,-10.11785 73.76376,-13.03006 36.63566,7.67084 74.11817,13.51418 107.52139,31.37059 33.09552,3.11264 46.95395,-33.23376 69.07548,-51.62307 35.11769,-26.26071 46.10716,-78.12669 85.19999,-96.89061 52.3835,-19.1294 99.37672,-51.18423 153.93112,-64.48572 59.05613,-19.81239 119.57108,-35.29858 177.97719,-56.91877 9.7269,-14.95763 41.1937,-25.84813 33.3943,-46.94118 -5.5993,-36.77381 -24.4319,-65.63625 -65.6616,-55.08423 -39.12962,2.3053 -76.30626,-27.85913 -85.78739,-64.581 -21.25985,-9.4157 -58.31319,41.75712 -87.17727,52.61375 -19.74191,10.30213 -39.27821,22.49715 -62.45824,20.75866 -32.39208,3.27432 -68.01909,-8.69511 -98.74706,2.92398 -45.08531,31.5598 -90.17063,63.11959 -135.25596,94.67937 -41.04864,-4.85993 -63.04636,34.92087 -84.86217,63.10105 -13.76242,15.02649 -20.1114,38.56574 -39.64836,46.9072 -23.97932,11.47052 -18.58788,45.23471 -37.95501,62.03307 -17.69311,21.0045 -31.59008,46.35767 -52.98972,63.32929 -41.02097,12.78639 -85.10233,-19.91356 -122.49895,12.63286 -16.50858,10.61364 -37.75698,36.34294 -25.21157,55.77776 9.83549,11.52488 8.34398,24.54041 3.6539,37.97688 -8.35371,25.49326 -4.60942,56.3103 9.86765,78.03391 27.58865,19.73377 41.29036,52.4542 70.60322,70.4407 6.65636,5.64939 16.77727,16.14825 26.42954,11.22053 z"
+     style="fill:#7f6f65;fill-opacity:1" />
+  <rect
+     ry="36.63969"
+     y="174.28479"
+     x="543.65912"
+     height="70"
+     width="257.91702"
+     id="button-marmari"
+     style="opacity:1;fill:#2272ce;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <text
+     id="marmari"
+     y="224.18713"
+     x="578.7309"
+     style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:Verdana;-inkscape-font-specification:'Verdana Bold'"
+       y="224.18713"
+       x="578.7309"
+       id="tspan4691">Marmari</tspan></text>
+  <rect
+     ry="36.63969"
+     y="437.6604"
+     x="573.8313"
+     height="70"
+     width="327.51367"
+     id="button-kardamena"
+     style="opacity:1;fill:#2272ce;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <text
+     id="kardamena"
+     y="487.55298"
+     x="609.14087"
+     style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:Verdana;-inkscape-font-specification:'Verdana Bold'"
+       y="487.55298"
+       x="609.14087"
+       id="tspan4691-4">Kardamena</tspan></text>
+  <text
+     id="text4726"
+     y="163.771"
+     x="972.98859"
+     style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#7f6f65;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-size:40px"
+       y="163.771"
+       x="972.98859"
+       id="tspan4728">Kos</tspan></text>
+  <text
+     id="kefalos"
+     y="650.67993"
+     x="327.23053"
+     style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#7f6f65;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-size:40px"
+       y="650.67993"
+       x="327.23053"
+       id="tspan4728-4">Kefalos</tspan></text>
+</svg>
