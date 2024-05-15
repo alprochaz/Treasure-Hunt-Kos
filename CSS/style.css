@@ -47,7 +47,7 @@ section {
 }
 
 h1 {
-  font-size: 2.8em;
+  font-size: 2.6em;
   margin-top: 0;
   margin-bottom: 40px;
   color: white;
@@ -57,12 +57,14 @@ h1 {
 @media screen and (min-width: 760px) {
   h1 {
     text-align: left;
+    font-size: 2.8em;
   }
 }
 
 h2 {
   font-size: 1.6em;
   text-align: center;
+  margin-top: 0px;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 760px) {
@@ -307,7 +309,6 @@ header {
   }
 }
 .blue-card__title {
-  font-size: 2.8em;
   margin-top: 0;
 }
 .blue-card__description {
@@ -357,7 +358,7 @@ header {
 }
 .review__svg {
   width: 60px;
-  animation: shake 4s;
+  animation: shake 3s;
   animation-iteration-count: infinite;
 }
 .review__svg--color {
@@ -417,6 +418,10 @@ header {
   .game--big {
     height: 560px;
   }
+}
+
+.above-svg-map {
+  margin-bottom: 0px;
 }
 
 .kos-map {
