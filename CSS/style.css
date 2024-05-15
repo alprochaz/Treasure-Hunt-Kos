@@ -310,9 +310,11 @@ header {
 }
 .blue-card__title {
   margin-top: 0;
+  margin-bottom: 60px;
 }
 .blue-card__description {
   font-size: 32px;
+  margin-bottom: 0px;
 }
 
 .reviews-container {
