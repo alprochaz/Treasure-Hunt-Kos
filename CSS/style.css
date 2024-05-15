@@ -365,7 +365,6 @@ header {
 }
 .review__svg:hover {
   fill: #cd22a8;
-  stroke: #cd22a8; /*ikona dopisu je jina a jenom fill na ni nefunguje*/
 }
 
 .choose-game__title {
@@ -385,7 +384,6 @@ header {
 
 .game {
   width: 100%;
-  max-width: 380px;
   height: 470px;
   border-radius: 10px;
   color: white;
@@ -396,11 +394,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-@media screen and (min-width: 960px) {
-  .game {
-    width: 380px;
-  }
 }
 .game__title {
   font-size: 2.7em;
@@ -413,10 +406,17 @@ header {
   margin-block: 0.5em;
 }
 .game--marmari {
-  background-image: url(/images/foto/marmari.jpg);
+  background-image: url(/images/foto/marmari-desktop.jpg);
+  background-position: center;
 }
 .game--kardamena {
-  background-image: url(/images/foto/kardamena.jpg);
+  background-image: url(/images/foto/kardamena-desktop.jpg);
+  background-position: center;
+}
+@media screen and (min-width: 960px) {
+  .game--big {
+    height: 560px;
+  }
 }
 
 .kos-map {
