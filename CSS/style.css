@@ -328,20 +328,6 @@ header {
   }
 }
 
-@keyframes shake {
-  0% {
-    transform: rotate(0);
-  }
-  70% {
-    transform: rotate(0);
-  }
-  85% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(-10deg);
-  }
-}
 .review {
   display: flex;
   align-items: center;
@@ -357,17 +343,6 @@ header {
     gap: 20px;
     box-shadow: 0px 0px 21px -8px rgb(204, 204, 204);
   }
-}
-.review__svg {
-  width: 60px;
-  animation: shake 3s;
-  animation-iteration-count: infinite;
-}
-.review__svg--color {
-  fill: rgb(34, 114, 206);
-}
-.review__svg:hover {
-  fill: #cd22a8;
 }
 
 .choose-game__title {
@@ -463,15 +438,6 @@ header {
   align-items: center;
   gap: 20px;
 }
-.info__svg {
-  width: 60px;
-  animation: shake 4s;
-  animation-iteration-count: infinite;
-}
-.info__svg--color {
-  fill: rgb(34, 114, 206);
-}
-
 .faq {
   display: flex;
   flex-direction: column;
@@ -579,4 +545,30 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus { /*aktivni pole
   .thank-you {
     text-align: left;
   }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  70% {
+    transform: rotate(0);
+  }
+  85% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+.icon-svg {
+  width: 60px;
+  fill: rgb(34, 114, 206);
+  animation: shake 4s;
+  animation-iteration-count: infinite;
+  transition-property: fill;
+  transition-duration: 1s;
+}
+.icon-svg:hover {
+  fill: #cd22a8;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,24 @@
+@use 'colors';
+
+@keyframes shake {  0%  {transform: rotate(0);}     // vrtici se ikonky v reviews
+                    70%  {transform: rotate(0);} 
+                    85% {transform: rotate(10deg);}
+                    100% {transform: rotate(-10deg);}
+}
+
+
+.icon-svg {
+
+    width: 60px;
+    fill: colors.$primary; 
+    
+    animation: shake 4s;
+    animation-iteration-count: infinite;
+    
+    transition-property: fill;      // ikonky se postupne prebarvi pri hover 
+    transition-duration: 1s;
+    
+    &:hover {
+        fill: #cd22a8;            
+    }
+}

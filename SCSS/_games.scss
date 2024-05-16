@@ -113,16 +113,9 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    
+     
     &__svg {
-        width: 60px;
-    
-        animation: shake 4s;
-        animation-iteration-count: infinite;
-       
-        &--color {
-            fill: colors.$primary;  
-        }
+
     }
     
-}
+}  

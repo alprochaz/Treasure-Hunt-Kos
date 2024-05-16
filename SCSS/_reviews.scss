@@ -10,11 +10,6 @@
     }
 }
 
-@keyframes shake {  0%  {transform: rotate(0);}  
-                    70%  {transform: rotate(0);} 
-                    85% {transform: rotate(10deg);}
-                    100% {transform: rotate(-10deg);}
-}
 
 .review {
     display: flex;
@@ -32,21 +27,7 @@
             -moz-box-shadow: 0px 0px 21px -8px rgba(204,204,204,1);
             box-shadow: 0px 0px 21px -8px rgba(204,204,204,1);      
     }
-
-    &__svg {
-        width: 60px;
-
-        animation: shake 3s;
-        animation-iteration-count: infinite;
-        
-        &--color {
-            fill: colors.$primary;  
-        }
-
-        &:hover {
-            fill: #cd22a8;            
-        }
-    }
+  
 
 }
 
