@@ -11,6 +11,9 @@ module.exports = function(eleventyConfig) {
   // Zkopirovat script do _site, aby fungovalo hamburger menu
   eleventyConfig.addPassthroughCopy("script-menu.js");
 
+  // Zkopirovat script do _site, aby fungoval fslightbox na fotky
+  eleventyConfig.addPassthroughCopy("fslightbox.js");
+
   // Poslani favicon - zatim jen testuji
   eleventyConfig.addPassthroughCopy("favicon.ico"); 
 

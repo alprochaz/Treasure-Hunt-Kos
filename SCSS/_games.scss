@@ -119,3 +119,19 @@
     }
     
 }  
+
+.photo-gallery {
+    display: grid;
+    gap: 20px;
+
+    @media screen and (min-width: 560px) { 
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        max-width: 500px;
+    }
+}

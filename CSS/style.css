@@ -438,6 +438,22 @@ header {
   align-items: center;
   gap: 20px;
 }
+.photo-gallery {
+  display: grid;
+  gap: 20px;
+}
+@media screen and (min-width: 560px) {
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.photo-gallery__image {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+}
+
 .faq {
   display: flex;
   flex-direction: column;
