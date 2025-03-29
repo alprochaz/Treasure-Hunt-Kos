@@ -90,7 +90,7 @@ h2 {
 .button {
 	display: inline-block;
     text-decoration: none;
-    margin-top: 2.4em;
+    margin-top: 1em;
 	padding: 10px 30px;
 	border-radius: 20px;
 	border: 0px;
@@ -100,6 +100,10 @@ h2 {
 	font-family: "Montserrat", sans-serif;
     line-height: normal;
 	background-color: colors.$primary;
+}
+
+.button--hero {
+    margin-top: 2.4em;
 }
 
 

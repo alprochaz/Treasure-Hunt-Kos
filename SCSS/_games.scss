@@ -114,10 +114,9 @@
     align-items: center;
     gap: 20px;
      
-    &__svg {
+    // &__svg {
 
-    }
-    
+    // }    
 }  
 
 .photo-gallery {
@@ -135,3 +134,230 @@
         max-width: 500px;
     }
 }
+
+
+/*------------------- Play a game -------------------*/
+button {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    margin-top: 1em;
+	padding: 10px;
+	border-radius: 20px;
+	border: 0px;
+	color: white;
+    font-size: 1em;
+	font-weight: 500;
+	font-family: "Montserrat", sans-serif;
+    line-height: normal;
+	background-color: colors.$primary;
+
+}
+
+:disabled {
+    opacity: 50%;
+}
+
+.hide-game,
+.hide {
+    display: none;
+}
+
+.message-code-check {
+    margin: 0;
+}
+
+.small-margin {
+    margin-bottom: 20px;
+}
+
+.treasure-map-grid {
+    margin-top: 20px;
+    // width: 452px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.treasure-map {
+    width: 100%;
+}
+
+.hide-map {
+    /* display: none; !!! pak se kousku nedrzi misto a nefunguje spravne! */
+    /* visibility: hidden; */
+    opacity: 0.04;
+}
+
+.map-part {
+    display: block;
+    width: 100%;
+}
+
+
+//
+.quiz {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #bef1c5;
+    border-radius: 5px;
+
+  }
+    
+.quiz__question {
+    margin-bottom: 20px;
+
+  }
+  
+.quiz__options {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+.quiz__options button {
+    background-color: white;
+    color: black;
+    border: 1px solid lightgray;
+}
+
+.quiz__options button:active,
+.quiz__options button:focus {
+    background-color: lightgray;
+}
+
+.quiz__submit {
+    width: 100%;
+    background-color: #33b249
+} 
+
+
+.clue-number-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-block: 20px;
+}
+.clue-number {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.clue {
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.clue h4 {
+    margin: 0px;
+}
+
+.clue__location {
+    margin: 0;
+}
+
+.clue__text {
+    margin-top: 0.5em;
+}
+
+.answers-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+
+}
+
+.answers-container p {
+    margin: 0px;
+}
+  
+//   button {
+//     display: block;
+//     margin: 0 auto;
+//     padding: 10px 20px;
+//     background-color: lightseagreen;
+//     color: #131313;
+//     border: none;
+//     border-radius: 5px;
+//     cursor: pointer;
+//   }
+  
+//   button:hover {
+//     background-color: #8f8d8d;
+//   }
+
+
+
+// od AI --------------------------------- nutne probrat
+// #quiz-container {
+//     max-width: 400px;
+//     margin: auto;
+//     background: white;
+//     padding: 20px;
+//     border-radius: 10px;
+//     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+// }
+// .map-part2 {
+//     display: none;
+//     width: 80px;
+//     height: 80px;
+//     background-color: lightblue;
+//     margin: 10px auto;
+//     border-radius: 5px;
+// }
+// .message {
+//     font-weight: bold;
+//     margin-top: 5px;
+//     text-align: center;
+// }
+// .correct {
+//     color: green;
+// }
+// .wrong {
+//     color: red;
+// }
+// .option {
+//     display: block;
+//     padding: 15px;
+//     background-color: #f0f0f0;
+//     margin: 5px 0;
+//     border-radius: 5px;
+//     cursor: pointer;
+//     text-align: center;
+//     transition: background 0.3s, border 0.3s;
+// }
+// .option:hover {
+//     background-color: #e0e0e0;
+// }
+// .selected {
+//     border: 2px solid #000;
+//     background-color: #d3d3d3;
+// }
+// .correct-answer {
+//     background-color: lightgreen !important;
+//     border: 2px solid green !important;
+// }
+// .wrong-answer {
+//     background-color: lightcoral !important;
+//     border: 2px solid red !important;
+// }
+// button {
+//     display: block;
+//     width: 100%;
+//     padding: 10px;
+//     margin-top: 10px;
+//     background-color: #007bff;
+//     color: white;
+//     border: none;
+//     border-radius: 5px;
+//     cursor: pointer;
+//     transition: background 0.3s;
+// }
+// button:hover {
+//     background-color: #0056b3;
+// }
+
