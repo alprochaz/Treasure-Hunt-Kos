@@ -4,7 +4,7 @@ title: Kos Treasure Hunt | Marmari Play
 ---
 <!-- styly jsou v games.scss -->
 <section id="section-code" >
-    <h1 class="about-game__title">Wellcome</h1> 
+    <h2 class="small-margin">Wellcome</h2> 
     <!-- lze upravit v allCodes nebo pro backendove reseni: server.js -->
     <form id="form-check-code">            
         <!-- Melo by fungovat: ["1111", "2222", "3333" az "8888"] -->
@@ -30,12 +30,12 @@ title: Kos Treasure Hunt | Marmari Play
         <div class="quiz__options" id="quiz-options"></div>
             <!-- odpovedi se generuji v JS jako buttony s tridou quiz__option -->
         <button class="quiz__submit" id="submit-button">Submit</button>
-        <p id="quiz__message"></p>
+        <p class="quiz__message" id="quiz__message"></p>
     </div>
     <!--  -->
 
     
-    <h2>Treasure map</h2>
+    <h2 class="small-margin">Treasure map</h2>
     <div class="treasure-map-grid" id="treasure-map">
         <!-- kdyz se spravne zodpovi otazka v kvizu, odebere se "hide-map" a ukaze se obrazek -->
         <img class="hide-map map-part" id="map-part1" src="/images/map/treasuremap-1.jpg" alt="map">
@@ -72,26 +72,26 @@ title: Kos Treasure Hunt | Marmari Play
     <div>
         <div class="clue hide" id="clue-1">
             <h4>Clue 1</h4>
-            <p class="clue__location">Location: Atlantica Marmari Beach Hotel</p>
-            <p class="clue__text">How many steps lead from the parking lot to the entrance building of the Atlantica Marmari Beach Hotel?</p>
+            <p class="clue__location">Location: Smiley's Restaurant</p>
+            <p class="clue__text">Which food does not belong to Greek cuisine?</p>
             <div class="answers-container">
-                <p>3 ➡ A</p>
-                <p>5 ➡ B</p>
-                <p>10 ➡ X</p>
-                <p>18 ➡ U</p>
+                <p>Saganaki ➡ </p>
+                <p>Mousaka ➡ </p>
+                <p>Dolmades ➡ </p>
+                <p>Pizza ➡ </p>
             </div>
         </div>
         <div class="clue hide" id="clue-2">
             <h4>Clue 2</h4>
-            <p class="clue__location">Location: Tourist office</p>
-            <p class="clue__text">What is the name of the volcanic island that can be reached by boat from the island Kos?</p>
+            <p class="clue__location">Location: Beach next to the Seaside Beach Hotel</p>
+            <p class="clue__text">How many white chimneys do you see on the roof of the building?</p>
             <div class="answers-container">
-                <p>Patmos ➡ </p>
-                <p>Nisiros ➡ </p>
-                <p>Pserimos ➡ </p>
-                <p>Kalymnos ➡ </p>
+                <p>1 ➡ </p>
+                <p>2 ➡ </p>
+                <p>4 ➡ </p>
+                <p>6 ➡ </p>
             </div>
-        </div>
+        </div>            
         <div class="clue hide" id="clue-3">
             <h4>Clue 3</h4>
             <p class="clue__location">Location: Beach between the Seaside and Thalasea Hotel</p>
@@ -105,35 +105,35 @@ title: Kos Treasure Hunt | Marmari Play
         </div>
         <div class="clue hide" id="clue-4">
             <h4>Clue 4</h4>
-            <p class="clue__location">Location: Smiley's Restaurant</p>
-            <p class="clue__text">Which food does not belong to Greek cuisine?</p>
+            <p class="clue__location">Location: Tourist office</p>
+            <p class="clue__text">What is the name of the volcanic island that can be reached by boat from the island Kos?</p>
             <div class="answers-container">
-                <p>Saganaki ➡ </p>
-                <p>Mousaka ➡ </p>
-                <p>Dolmades ➡ </p>
-                <p>Pizza ➡ </p>
+                <p>Patmos ➡ </p>
+                <p>Nisiros ➡ </p>
+                <p>Pserimos ➡ </p>
+                <p>Kalymnos ➡ </p>
             </div>
         </div>
         <div class="clue hide" id="clue-5">
             <h4>Clue 5</h4>
-            <p class="clue__location">Location: Bus stop next to Mythos bar</p>
-            <p class="clue__text">What street name is written on the green sign at the bus stop?</p>
+            <p class="clue__location">Location: Tourist office</p>
+            <p class="clue__text">Which of the islands will you NOT visit when you go on a 3-island boat trip? The information boards will help you find the answer. </p>
             <div class="answers-container">
-                <p>MARMAROU ➡ </p>
-                <p>IRELOCHITON ➡ </p>
-                <p>PALEPLOGOU ➡ </p>
-                <p>MAKARIOU ➡ </p>
+                <p>Pserimos ➡ </p>
+                <p>Plati ➡ </p>
+                <p>Kalymnos ➡ </p>
+                <p>Nisiros ➡ </p>
             </div>
         </div>
         <div class="clue hide" id="clue-6">
             <h4>Clue 6</h4>
-            <p class="clue__location">Location: Beach next to the Seaside Beach Hotel</p>
-            <p class="clue__text">How many white chimneys do you see on the roof of the building?</p>
+            <p class="clue__location">Location: Atlantica Marmari Beach Hotel</p>
+            <p class="clue__text">How many steps lead from the parking lot to the entrance building of the Atlantica Marmari Beach Hotel?</p>
             <div class="answers-container">
-                <p>1 ➡ </p>
-                <p>2 ➡ </p>
-                <p>4 ➡ </p>
-                <p>6 ➡ </p>
+                <p>3 ➡ A</p>
+                <p>5 ➡ B</p>
+                <p>10 ➡ X</p>
+                <p>18 ➡ U</p>
             </div>
         </div>
         <div class="clue hide" id="clue-7">
@@ -149,13 +149,13 @@ title: Kos Treasure Hunt | Marmari Play
         </div>
         <div class="clue hide" id="clue-8">
             <h4>Clue 8</h4>
-            <p class="clue__location">Location: Tourist office</p>
-            <p class="clue__text">Which of the islands will you NOT visit when you go on a 3-island boat trip? The information boards will help you find the answer. </p>
+            <p class="clue__location">Location: In front of the Esperia Hotel</p>
+            <p class="clue__text">How many flagpoles are there in front of the Esperia Hotel?</p>
             <div class="answers-container">
-                <p>Pserimos ➡ </p>
-                <p>Plati ➡ </p>
-                <p>Kalymnos ➡ </p>
-                <p>Nisiros ➡ </p>
+                <p>1 ➡ </p>
+                <p>3 ➡ </p>
+                <p>4 ➡ </p>
+                <p>5 ➡ ok </p>
             </div>
         </div>
         <div class="clue hide" id="clue-9">
@@ -171,15 +171,20 @@ title: Kos Treasure Hunt | Marmari Play
         </div>
         <div class="clue hide" id="clue-10">
             <h4>Clue 10</h4>
-            <p class="clue__location">Location: In front of the Esperia Hotel</p>
-            <p class="clue__text">How many flagpoles are there in front of the Esperia Hotel?</p>
+            <p class="clue__location">Location: Bus stop next to Mythos bar</p>
+            <p class="clue__text">What street name is written on the green sign at the bus stop?</p>
             <div class="answers-container">
-                <p>1 ➡ </p>
-                <p>3 ➡ </p>
-                <p>4 ➡ </p>
-                <p>5 ➡ ok </p>
+                <p>MARMAROU ➡ </p>
+                <p>IRELOCHITON ➡ </p>
+                <p>PALEPLOGOU ➡ </p>
+                <p>MAKARIOU ➡ </p>
             </div>
         </div>
+       
+        
+       
+        
+        
         
     </div>
 </section>
