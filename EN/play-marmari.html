@@ -9,7 +9,7 @@ title: Kos Treasure Hunt | Marmari Play
     <form id="form-check-code">            
         <!-- Melo by fungovat: ["1111", "2222", "3333" az "8888"] -->
         <p>To start the game, enter the code you received per email.  </p>
-        <label id="code-label">  <input type="text" class="code-input" id="code-input" placeholder="Enter your code">             
+        <label id="code-label">  <input type="text" class="code-input" id="code-input" placeholder="Enter your code" maxlength="4">             
         </label>
         <p class="message-code-check" id="message-code-check"></p>
         
@@ -22,6 +22,7 @@ title: Kos Treasure Hunt | Marmari Play
 <section id="game-start" class="hide-game">
     <h2 class="small-margin">Let's start</h2> 
     <p>Answer the following questions to get your treasure map.</p>
+
     <!--Quiz: otazky, jsou ulozene v objektu v JS, doplnuji se a kontroluji v JS  -->
     <div class="quiz" id="quiz">
         <h2 class="small-margin">Quiz</h2>
@@ -50,11 +51,11 @@ title: Kos Treasure Hunt | Marmari Play
 
 
 <!-- Otazky a ukoly s mapou -->
-<section id="game-part1" class="">
+<section id="game-part1" class="hide-game">
     <h2 class="small-margin">Solve the riddles</h2>
     <p>Follow the map and solve all the riddles and questions.</p>
     <p>Write down the letters from your answers. You will need them at the end of the game.</p>
-    <img class="treasure-map" src="/images/map/mapa-test2.jpg" alt="">
+    <img class="treasure-map" src="/images/map/mapa-test2.jpg" alt="treasure map with clues">
     <div class="clue-number-container">
         <button class="clue-number"> 1 </button>
         <button class="clue-number"> 2 </button>
@@ -65,12 +66,12 @@ title: Kos Treasure Hunt | Marmari Play
         <button class="clue-number"> 7 </button>
         <button class="clue-number"> 8 </button>
         <button class="clue-number"> 9 </button>
-        <button class="clue-number"> 10 </button>
-
+        <button class="clue-number"> 10 </button>        
     </div>
 
+    <!-- 10 Clues: 1. je odkryte, ostatni se ukazou na kliknuti na cislo-->
     <div>
-        <div class="clue hide" id="clue-1">
+        <div class="clue" id="clue-1">
             <h4>Clue 1</h4>
             <p class="clue__location">Location: Smiley's Restaurant</p>
             <p class="clue__text">Which food does not belong to Greek cuisine?</p>
@@ -187,6 +188,36 @@ title: Kos Treasure Hunt | Marmari Play
         
         
     </div>
+
+    <button id="button-continue2">Continue</button>
+</section>
+
+
+<section id="game-part2" class="hide-game">
+    <h2 class="small-margin" id="title-chest">You found the chest!</h2>
+    <form id="form-end-code" >
+        <p>If you have found all the clues, enter the code and try to open the chest.</p>
+        <div class="end-code-container">
+            <label id="">  <input type="text" class="end-code" id="" placeholder="1" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="2" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="3" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="4" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="5" maxlength="1">   </label>
+            <!-- <label id="">  <input type="text" class="end-code" id="" placeholder="6" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="7" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="8" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="9" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="10" maxlength="1">   </label> -->
+        </div>
+        <button class="" type="submit" id="button-end-code">Check code</button>
+        <br>
+    </form>
+
+
+
+
+    <img class="treasure-chest hide" id="treasure-chest" src="/images/treasure/chest.gif" alt="treasure chest opens">
+    
 </section>
 
 

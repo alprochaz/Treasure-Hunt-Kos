@@ -31,6 +31,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
    
     &__title {
         font-size: 2.7em;
@@ -92,8 +93,9 @@
     font-size: 2em;
 }
 
-.about-game__intro {
-    margin-bottom: 40px;
+.game-button {
+    margin-block: 0.5em;
+
 }
 
 .info-container {
@@ -159,6 +161,10 @@ button {
 .hide-game,
 .hide {
     display: none;
+}
+
+.code-input {
+    font-size: 0.8em;
 }
 
 .message-code-check {
@@ -248,6 +254,11 @@ button {
     font-size: 1.2em;
 }
 
+.clue-number:active,
+.clue-number:focus {
+    background-color: #e6007e;
+}
+
 .clue {
     border: 2px solid lightgray;
     border-radius: 10px;
@@ -277,6 +288,30 @@ button {
 .answers-container p {
     margin: 0px;
 }
+
+.end-code-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-block: 20px;
+}
+.end-code-container input[type=text] {
+    font-weight: 700;
+    font-size: 1.2em;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.end-code-container input::placeholder {
+    text-align: center;
+    font-weight: normal;
+}
+
+.treasure-chest {
+    width: 100%;
+}
+
   
 //   button {
 //     display: block;

@@ -23,7 +23,7 @@ input[type=text], input[type=email], textarea {
     border-radius: 17px;
     display: block;
     box-sizing: border-box;
-    font-size: 0.8em;
+   
     font-family: "Urbanist", sans-serif;
 
   }
@@ -33,6 +33,10 @@ input[type=text], input[type=email] {
     @media screen and (min-width: 760px) {
         width: 300px;
     }
+}
+
+.form-field input {
+  font-size: 0.8em;
 }
 
 label {

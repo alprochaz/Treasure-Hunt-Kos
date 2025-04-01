@@ -1,4 +1,4 @@
-console.log('funguju')
+// Script pro hru Marmari
 
 //Moje reseni s frontendovou kontrolou kodu, coz neni idealni
 const allCodes = ["1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888"]
@@ -37,21 +37,21 @@ const quizData = [
         options: ["Tigaki", "Mastichari", "Faliraki", "Kardamena"],
         answer: "Faliraki"
     },
-    {
-        question: "What doesn't belong in a Greek salad?",
-        options: ["Tomato", "Onion", "Potato", "Feta"],
-        answer: "Potato"
-    },
-    {
-        question: "Which animal can you see while swimming in Marmari?",
-        options: ["Whale", "Turtle", "Penguin", "Lobster"],
-        answer: "Turtle"
-    },
-    {
-        question: "Which island you can see from Marmari?",
-        options: ["Rhodos", "Naxos", "Kalymnos", "Crete"],
-        answer: "Kalymnos"
-    },
+    // {
+    //     question: "What doesn't belong in a Greek salad?",
+    //     options: ["Tomato", "Onion", "Potato", "Feta"],
+    //     answer: "Potato"
+    // },
+    // {
+    //     question: "Which animal can you see while swimming in Marmari?",
+    //     options: ["Whale", "Turtle", "Penguin", "Lobster"],
+    //     answer: "Turtle"
+    // },
+    // {
+    //     question: "Which island you can see from Marmari?",
+    //     options: ["Rhodos", "Naxos", "Kalymnos", "Crete"],
+    //     answer: "Kalymnos"
+    // },
 
 ];
   
@@ -86,7 +86,7 @@ function selectAnswer(e) {
     Array.from(optionsElement.children).forEach(btn => btn.style.backgroundColor = "");
 
     selectedAnswer = e.target;
-    console.log(selectedAnswer)
+
 }
 
 function checkAnswer() {
@@ -143,7 +143,7 @@ showQuestion();
 // });
 
 
-// Button - pokracovani hry po ziskani mapy
+// Button Continue 1 - pokracovani hry po ziskani mapy
 buttonContinue1.addEventListener('click', () => {
     document.querySelector('#game-part1').classList.remove('hide-game')
     GameStartEl.classList.add('hide-game')
@@ -165,13 +165,44 @@ clueNumbers.forEach(number => {
 })
 
 
+// Button Continue 2 - pokracovani hry po vsech clues
+const buttonContinue2 = document.querySelector('#button-continue2')
+buttonContinue2.addEventListener('click', () => {
+    document.querySelector('#game-part2').classList.remove('hide-game')
+    document.querySelector('#game-part1').classList.add('hide-game')
+})
 
 
+// Kontrola zaverecneho kodu
+const allClueCodes = ["A", "B", "C", "D", "E" ]
 
+document.querySelector("#form-end-code").addEventListener("submit", (e) => { 
+    e.preventDefault()  
+    let i = 0
+    let rightCode = 0
 
+    const allClueAnswers = document.querySelectorAll('.end-code')
 
+    allClueAnswers.forEach(item => { 
+        if (item.value.toUpperCase() === allClueCodes[i]) {
+            item.style.backgroundColor = "green"
+            rightCode++
+        }
+        else {
+            console.log(i + " je spatne")
+            item.style.backgroundColor = "red"
+        }
+        i++
+    })
 
-
+    if (rightCode === allClueCodes.length) {
+        console.log("Vyhral jsi")
+        document.querySelector('#treasure-chest').classList.remove('hide')
+        document.querySelector('#form-end-code').classList.add('hide')
+        document.querySelector('#title-chest').innerText = 'You are a winner!'
+    }
+    
+})
 
 
 
