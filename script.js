@@ -1,14 +1,3 @@
-// Script pro contact form
-const contactForm = document.querySelector("#contact-form")
-contactForm.addEventListener("submit", (e) => {
-    e.preventDefault()
-    contactForm.innerHTML = `
-         <p>Contact form currently out of order. </p>
-         <p>Please send an email directly to: treasure.hunt.kos@gmail.com</p>
-         <p>Thank you.</p>
-    `
-})
-
 // Script pro hru Marmari
 
 //Moje reseni s frontendovou kontrolou kodu, coz neni idealni
@@ -48,21 +37,21 @@ const quizData = [
         options: ["Tigaki", "Mastichari", "Faliraki", "Kardamena"],
         answer: "Faliraki"
     },
-    // {
-    //     question: "What doesn't belong in a Greek salad?",
-    //     options: ["Tomato", "Onion", "Potato", "Feta"],
-    //     answer: "Potato"
-    // },
-    // {
-    //     question: "Which animal can you see while swimming in Marmari?",
-    //     options: ["Whale", "Turtle", "Penguin", "Lobster"],
-    //     answer: "Turtle"
-    // },
-    // {
-    //     question: "Which island you can see from Marmari?",
-    //     options: ["Rhodos", "Naxos", "Kalymnos", "Crete"],
-    //     answer: "Kalymnos"
-    // },
+    {
+        question: "What doesn't belong in a Greek salad?",
+        options: ["Tomato", "Onion", "Potato", "Feta"],
+        answer: "Potato"
+    },
+    {
+        question: "Which animal can you see while swimming in Marmari?",
+        options: ["Whale", "Turtle", "Penguin", "Lobster"],
+        answer: "Turtle"
+    },
+    {
+        question: "Which island you can see from Marmari?",
+        options: ["Rhodos", "Naxos", "Kalymnos", "Crete"],
+        answer: "Kalymnos"
+    },
 
 ];
   
