@@ -426,8 +426,25 @@ header {
   font-size: 2em;
 }
 
-.game-button {
-  margin-block: 0.5em;
+.buy-game-button {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  text-align: center;
+}
+
+.play-game {
+  background-image: url(/images/foto/marmari-pastel.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 60px 20px;
+}
+
+.play-game__button {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 20px auto;
 }
 
 .info-container {
@@ -489,12 +506,21 @@ button {
   display: none;
 }
 
+.section-code {
+  background-image: url(/images/treasure/chest-on-the-beach-opacity85.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 60px 20px;
+  min-height: 90vh;
+}
+
 .code-input {
   font-size: 0.8em;
 }
 
 .message-code-check {
   margin: 0;
+  text-shadow: 0px 0px 9px rgb(255, 255, 255), -12px 2px 18px rgb(255, 255, 255), -2px 10px 15px rgb(255, 255, 255), -5px -14px 13px rgb(255, 255, 255), -15px 5px 20px rgb(255, 255, 255);
 }
 
 .small-margin {
@@ -669,6 +695,10 @@ button {
   margin-top: 20px;
 }
 
+.min-height85vh {
+  min-height: 85vh;
+}
+
 .contact {
   color: white;
 }
@@ -702,7 +732,8 @@ input[type=text], input[type=email], textarea {
   }
 }
 
-.form-field input {
+.form-field input,
+.form-field textarea {
   font-size: 0.8em;
 }
 

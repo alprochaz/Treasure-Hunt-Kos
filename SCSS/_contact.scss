@@ -1,4 +1,7 @@
 @use 'colors';
+.min-height85vh {
+  min-height: 85vh;
+}
 
 .contact {
     color: white;
@@ -35,7 +38,8 @@ input[type=text], input[type=email] {
     }
 }
 
-.form-field input {
+.form-field input,
+.form-field textarea {
   font-size: 0.8em;
 }
 

@@ -1,3 +1,14 @@
+// Script pro contact form
+const contactForm = document.querySelector("#contact-form")
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    contactForm.innerHTML = `
+         <p>Contact form currently out of order. </p>
+         <p>Please send an email directly to: treasure.hunt.kos@gmail.com</p>
+         <p>Thank you.</p>
+    `
+})
+
 // Script pro hru Marmari
 
 //Moje reseni s frontendovou kontrolou kodu, coz neni idealni
@@ -119,10 +130,11 @@ function checkAnswer() {
 }
  
 function showResult() {
+    document.querySelector('#quiz-title').innerHTML = "Well played"
     questionElement.innerHTML = `
-        <h1>Well played!</h1>
         <p>You got now your map and you can continue.</p>
         `;
+    document.querySelector('#lets-start').style.display = "none"
     optionsElement.innerHTML = "";  // Vyčistíme možnosti
     submitButton.style.display = "none";  // Skryjeme tlačítko po dokončení
     messageElement.innerHTML = "";
@@ -173,7 +185,7 @@ buttonContinue2.addEventListener('click', () => {
 })
 
 
-// Kontrola zaverecneho kodu
+// Kontrola zaverecneho kodu - jeste provizovni 👀
 const allClueCodes = ["A", "B", "C", "D", "E" ]
 
 document.querySelector("#form-end-code").addEventListener("submit", (e) => { 

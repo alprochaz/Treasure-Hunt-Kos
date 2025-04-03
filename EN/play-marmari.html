@@ -3,7 +3,7 @@ layout: main-template-EN.njk
 title: Kos Treasure Hunt | Marmari Play
 ---
 <!-- styly jsou v games.scss -->
-<section id="section-code" >
+<section id="section-code" class="section-code">
     <h2 class="small-margin">Wellcome</h2> 
     <!-- lze upravit v allCodes nebo pro backendove reseni: server.js -->
     <form id="form-check-code">            
@@ -20,12 +20,13 @@ title: Kos Treasure Hunt | Marmari Play
 
 
 <section id="game-start" class="hide-game">
-    <h2 class="small-margin">Let's start</h2> 
-    <p>Answer the following questions to get your treasure map.</p>
-
+    <div id="lets-start">
+        <h2 class="small-margin">Let's start</h2> 
+        <p>Answer the following questions to get your treasure map.</p>
+    </div>
     <!--Quiz: otazky, jsou ulozene v objektu v JS, doplnuji se a kontroluji v JS  -->
     <div class="quiz" id="quiz">
-        <h2 class="small-margin">Quiz</h2>
+        <h2 class="small-margin" id="quiz-title">Quiz</h2>
         
         <div class="quiz__question" id="quiz-question"></div>
         <div class="quiz__options" id="quiz-options"></div>
@@ -39,10 +40,10 @@ title: Kos Treasure Hunt | Marmari Play
     <h2 class="small-margin">Treasure map</h2>
     <div class="treasure-map-grid" id="treasure-map">
         <!-- kdyz se spravne zodpovi otazka v kvizu, odebere se "hide-map" a ukaze se obrazek -->
-        <img class="hide-map map-part" id="map-part1" src="/images/map/treasuremap-1.jpg" alt="map">
-        <img class="hide-map map-part" id="map-part2" src="/images/map/treasuremap-2.jpg" alt="map">
-        <img class="hide-map map-part" id="map-part3" src="/images/map/treasuremap-3.jpg" alt="map">
-        <img class="hide-map map-part" id="map-part4" src="/images/map/treasuremap-4.jpg" alt="map">
+        <img class="hide-map map-part" id="map-part1" src="/images/map/treasure-map-part1.jpg" alt="map">
+        <img class="hide-map map-part" id="map-part2" src="/images/map/treasure-map-part2.jpg" alt="map">
+        <img class="hide-map map-part" id="map-part3" src="/images/map/treasure-map-part3.jpg" alt="map">
+        <img class="hide-map map-part" id="map-part4" src="/images/map/treasure-map-part4.jpg" alt="map">
     </div>
     <!-- pokracovani ve hre je disabled -> button se aktivuje, az po skonceni kvizu -->
     <button id="button-continue1" disabled>Continue</button>
@@ -219,11 +220,6 @@ title: Kos Treasure Hunt | Marmari Play
     <img class="treasure-chest hide" id="treasure-chest" src="/images/treasure/chest.gif" alt="treasure chest opens">
     
 </section>
-
-
-
-
-
 
 
 
