@@ -158,7 +158,8 @@ const clues = document.querySelectorAll('.clue');
 clueNumbers.forEach(number => {
     number.addEventListener('click', (e) => {
         console.log(e.target.innerText)
-        clues.forEach(clue => clue.classList.add('hide'));        // Skryjeme vsechny clue/otazky, aby se zobrazovala pak jen jedna
+        clues.forEach(clue => clue.classList.add('hide'))        // Skryjeme vsechny clue/otazky, aby se zobrazovala pak jen jedna
+        document.querySelector('#clue-number-first').classList.remove('clue-number-first')             // odebereme zvyrazneni prvniho clue
 
         const selectedClue = `clue-${e.target.innerText}`       // Sestaveni ID otazky: clue-1 -> dle toho se zobrazi otazka k bodu
         document.getElementById(selectedClue).classList.remove('hide')
@@ -174,8 +175,8 @@ buttonContinue2.addEventListener('click', () => {
 })
 
 
-// Kontrola zaverecneho kodu - jeste provizovni 👀
-const allClueCodes = ["A", "B", "C", "D", "E" ]
+// Kontrola zaverecneho kodu - jeste provizovni 👀 staci zadat prvni 3:  a b c
+const allClueCodes = ["A", "B", "C", "", "", "", "", "", "", ""]
 
 document.querySelector("#form-end-code").addEventListener("submit", (e) => { 
     e.preventDefault()  

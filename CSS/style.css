@@ -600,7 +600,8 @@ button {
 }
 
 .clue-number:active,
-.clue-number:focus {
+.clue-number:focus,
+.clue-number-first {
   background-color: #e6007e;
 }
 
