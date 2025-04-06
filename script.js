@@ -33,7 +33,7 @@ const buttonContinue1 = document.querySelector('#button-continue1')
 // quiz 4 otazky -> odkryvaji mapu **********************************************************************************************************
 const quizData = [
     {
-        question: "Which of the villages is NOT located on the island of Kos?",
+        question: "Which village is NOT located on the island of Kos?",
         options: ["Tigaki", "Mastichari", "Faliraki", "Kardamena"],
         answer: "Faliraki"
     },
@@ -43,12 +43,12 @@ const quizData = [
         answer: "Potato"
     },
     {
-        question: "Which animal can you see while swimming in Marmari?",
+        question: "Which animal might you see while swimming in Marmari?",
         options: ["Whale", "Turtle", "Penguin", "Lobster"],
         answer: "Turtle"
     },
     {
-        question: "Which island you can see from Marmari?",
+        question: "Which island can you see from Marmari?",
         options: ["Rhodos", "Naxos", "Kalymnos", "Crete"],
         answer: "Kalymnos"
     },

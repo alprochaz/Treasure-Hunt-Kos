@@ -382,14 +382,14 @@ header {
   justify-content: space-between;
 }
 .game__title {
-  font-size: 2.7em;
+  font-size: 2.4em;
   margin-block: 0;
 }
 .game__description {
   background-color: #7F6F65;
 }
 .game__text {
-  margin-block: 0.5em;
+  margin: 0.5em;
 }
 .game--marmari {
   background-image: url(/images/foto/marmari-desktop.jpg);
@@ -422,7 +422,6 @@ header {
 
 /*------------------- Marmari a Kardamena-------------------*/
 .about-game__title {
-  text-align: left;
   font-size: 2em;
 }
 
