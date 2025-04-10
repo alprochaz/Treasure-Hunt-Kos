@@ -10,7 +10,7 @@ module.exports = function(eleventyConfig) {
 
   // Zkopirovat scripty do _site, aby fungovalo hamburger menu a hry
   eleventyConfig.addPassthroughCopy("script-menu.js");
-  eleventyConfig.addPassthroughCopy("script.js");
+  eleventyConfig.addPassthroughCopy("script-marmari.js");
   eleventyConfig.addPassthroughCopy("script-contact.js");
 
   // Zkopirovat script do _site, aby fungoval fslightbox na fotky

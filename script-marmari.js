@@ -12,23 +12,22 @@ document.querySelector("#form-check-code").addEventListener("submit", (e) => {  
     if(allCodes.includes(codeInput)) {
         messageCode.textContent = "✔ Your code is ok. Let's start!"
         messageCode.style.color = "green" 
-        // Po zadani spravneho kodu se automaticky spusti hra po 1,5s
+        document.querySelector('#button-check-code').style.display = "none"
+        // Po zadani spravneho kodu se automaticky spusti hra po 2s
         setTimeout(() => {
            GameStartEl.classList.remove("hide-game") 
            document.querySelector('#section-code').style.display = "none"
-        //   document.querySelector('#form-check-code').style.display = "none"
-        //   document.querySelector('h1').style.display = "none"
         }, 2000);       
         
     } else {
         messageCode.textContent = "✖ Wrong code. Try again."
-        messageCode.style.color = "red"    }
-
-    console.log(`Vas zadany kod: ${codeInput}`)
+        messageCode.style.color = "red"    
+    }
 })
 // konec kontroly kodu
 
 const buttonContinue1 = document.querySelector('#button-continue1')
+
 
 // quiz 4 otazky -> odkryvaji mapu **********************************************************************************************************
 const quizData = [
@@ -108,7 +107,7 @@ function checkAnswer() {
             } else {
                 showResult();
             }
-        }, 1200); // Po 1.5s přejde na další otázku
+        }, 1200); // Po 1.2s přejde na další otázku
 
     } else {
         console.log("wrong answer")
@@ -121,7 +120,7 @@ function checkAnswer() {
 function showResult() {
     document.querySelector('#quiz-title').innerHTML = "Well played"
     questionElement.innerHTML = `
-        <p>You got now your map and you can continue.</p>
+        <p>You've got your map. Now you can continue your adventure!</p>
         `;
     document.querySelector('#lets-start').style.display = "none"
     optionsElement.innerHTML = "";  // Vyčistíme možnosti
@@ -187,12 +186,12 @@ document.querySelector("#form-end-code").addEventListener("submit", (e) => {
 
     allClueAnswers.forEach(item => { 
         if (item.value.toUpperCase() === allClueCodes[i]) {
-            item.style.backgroundColor = "green"
+            item.style.background = "#01c001"
             rightCode++
         }
         else {
             console.log(i + " je spatne")
-            item.style.backgroundColor = "red"
+            item.style.background = "#f32b2b"
         }
         i++
     })
@@ -201,7 +200,11 @@ document.querySelector("#form-end-code").addEventListener("submit", (e) => {
         console.log("Vyhral jsi")
         document.querySelector('#treasure-chest').classList.remove('hide')
         document.querySelector('#form-end-code').classList.add('hide')
-        document.querySelector('#title-chest').innerText = 'You are a winner!'
+        document.querySelector('#title-chest').innerText = "Congratulations! "
+        document.querySelector('#message-winner').textContent = "You successfully helped Hercules find the beach where he landed with his ship and found the lost treasure!"
+    } else {
+        document.querySelector('#message-end-code').textContent = "Oops! It looks like there's a mistake. Fix the red fields and try again!"
+        document.querySelector('#message-end-code').style.color = "red"
     }
     
 })

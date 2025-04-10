@@ -1,10 +1,10 @@
 ---
 layout: main-template-EN.njk
-title: Kos Treasure Hunt | Marmari Play
+title: Kos Treasure Hunt | Marmari Play Game
 ---
 <!-- styly jsou v games.scss -->
 <section id="section-code" class="section-code">
-    <h2 class="small-margin">Wellcome</h2> 
+    <h1 class="small-margin">Marmari</h1> 
     <!-- lze upravit v allCodes nebo pro backendove reseni: server.js -->
     <form id="form-check-code">            
         <!-- Melo by fungovat: ["1111", "2222", "3333" az "8888"] -->
@@ -13,7 +13,7 @@ title: Kos Treasure Hunt | Marmari Play
         </label>
         <p class="message-code-check" id="message-code-check"></p>
         
-        <button class="" type="submit" id="button-check-code">Check code</button>
+        <button type="submit" id="button-check-code">Check code</button>
     </form>
 
 </section>
@@ -22,7 +22,7 @@ title: Kos Treasure Hunt | Marmari Play
 <section id="game-start" class="hide-game">
     <div id="lets-start">
         <h2 class="small-margin">Let's start</h2> 
-        <p>Answer the following questions to get your treasure map.</p>
+        <p>To get your treasure map, first prove you know your way around by answering these questions.</p>
     </div>
     <!--Quiz: otazky, jsou ulozene v objektu v JS, doplnuji se a kontroluji v JS  -->
     <div class="quiz" id="quiz">
@@ -70,134 +70,130 @@ title: Kos Treasure Hunt | Marmari Play
         <button class="clue-number"> 10 </button>        
     </div>
 
-    <!-- 10 Clues: 1. je odkryte, ostatni se ukazou na kliknuti na cislo-->
+    <!-- 10 Clues: 1. je odkryte, ostatni se ukazou na kliknuti na cislo - G o u r n i a t i s-->
     <div>
         <div class="clue" id="clue-1">
             <h4>Clue 1</h4>
             <p class="clue__location">Location: Smiley's Restaurant</p>
-            <p class="clue__text">Which food does not belong to Greek cuisine?</p>
+            <p class="clue__text">Which food is not part of traditional Greek cuisine?</p>
             <div class="answers-container">
-                <p>Saganaki ➡ </p>
-                <p>Mousaka ➡ </p>
-                <p>Dolmades ➡ </p>
-                <p>Pizza ➡ </p>
+                <p>Saganaki ➡ K</p>
+                <p>Mousaka ➡ H </p>
+                <p>Dolmades ➡ A</p>
+                <p>Pizza ➡ G </p>
             </div>
         </div>
         <div class="clue hide" id="clue-2">
             <h4>Clue 2</h4>
             <p class="clue__location">Location: Beach next to the Seaside Beach Hotel</p>
-            <p class="clue__text">How many white chimneys do you see on the roof of the building?</p>
+            <p class="clue__text">How many white chimneys can you see on the building's roof?</p>
             <div class="answers-container">
-                <p>1 ➡ </p>
-                <p>2 ➡ </p>
-                <p>4 ➡ </p>
-                <p>6 ➡ </p>
+                <p>1 ➡ z</p>
+                <p>2 ➡ o</p>
+                <p>4 ➡ p</p>
+                <p>6 ➡ e</p>
             </div>
         </div>            
         <div class="clue hide" id="clue-3">
             <h4>Clue 3</h4>
             <p class="clue__location">Location: Beach between the Seaside and Thalasea Hotel</p>
-            <p class="clue__text">What symbol can be seen on the large white sign on the beach, visible from the sea between the Seaside and Thalassea hotels?</p>
+            <p class="clue__text">What symbol appears on the large white sign on the beach, visible from the sea between the Seaside and Thalassea hotels?</p>
             <div class="answers-container">
-                <p>🏴 ➡ </p>
-                <p>🚾 ➡ </p>
-                <p>⚡ ➡ </p>
-                <p>⚓︎ ➡ </p>
+                <p>🏴 ➡ s</p>
+                <p>🚾 ➡ w</p>
+                <p>⚡ ➡ m</p>
+                <p>⚓︎ ➡ u</p>
             </div>
         </div>
         <div class="clue hide" id="clue-4">
             <h4>Clue 4</h4>
             <p class="clue__location">Location: Tourist office</p>
-            <p class="clue__text">What is the name of the volcanic island that can be reached by boat from the island Kos?</p>
+            <p class="clue__text">What is the name of the volcanic island that can be reached by boat from the island of Kos?</p>
             <div class="answers-container">
-                <p>Patmos ➡ </p>
-                <p>Nisiros ➡ </p>
-                <p>Pserimos ➡ </p>
-                <p>Kalymnos ➡ </p>
+                <p>Patmos ➡ t</p>
+                <p>Nisiros ➡ r</p>
+                <p>Pserimos ➡ c</p>
+                <p>Kalymnos ➡ b</p>
             </div>
         </div>
         <div class="clue hide" id="clue-5">
             <h4>Clue 5</h4>
             <p class="clue__location">Location: Tourist office</p>
-            <p class="clue__text">Which of the islands will you NOT visit when you go on a 3-island boat trip? The information boards will help you find the answer. </p>
+            <p class="clue__text">Which of these islands will you NOT visit on a 3-island boat trip? Check the information boards for the answer. </p>
             <div class="answers-container">
-                <p>Pserimos ➡ </p>
-                <p>Plati ➡ </p>
-                <p>Kalymnos ➡ </p>
-                <p>Nisiros ➡ </p>
+                <p>Pserimos ➡ u</p>
+                <p>Plati ➡ x</p>
+                <p>Kalymnos ➡ y</p>
+                <p>Rhodos ➡ n</p>
             </div>
         </div>
         <div class="clue hide" id="clue-6">
             <h4>Clue 6</h4>
             <p class="clue__location">Location: Atlantica Marmari Beach Hotel</p>
-            <p class="clue__text">How many steps lead from the parking lot to the entrance building of the Atlantica Marmari Beach Hotel?</p>
+            <p class="clue__text">How many steps lead from the parking lot to the entrance of the Atlantica Marmari Beach Hotel?</p>
             <div class="answers-container">
-                <p>3 ➡ A</p>
-                <p>5 ➡ B</p>
-                <p>10 ➡ X</p>
-                <p>18 ➡ U</p>
+                <p>3 ➡ f</p>
+                <p>5 ➡ n</p>
+                <p>8 ➡ i</p>
+                <p>13 ➡ d</p>
             </div>
         </div>
         <div class="clue hide" id="clue-7">
             <h4>Clue 7</h4>
             <p class="clue__location">Location: In front of the Sentido Hotel</p>
-            <p class="clue__text">How many statues of this shape 💧 are there in front of the Sentido Hotel?</p>
+            <p class="clue__text">How many statues shaped like this 💧 are in front of the Sentido Hotel?</p>
             <div class="answers-container">
-                <p>1 ➡ </p>
-                <p>3 ➡ </p>
-                <p>4 ➡ </p>
-                <p>5 ➡ </p>
+                <p>1 ➡ l</p>
+                <p>2 ➡ v</p>
+                <p>4 ➡ a</p>
+                <p>5 ➡ c</p>
             </div>
         </div>
         <div class="clue hide" id="clue-8">
             <h4>Clue 8</h4>
             <p class="clue__location">Location: In front of the Esperia Hotel</p>
-            <p class="clue__text">How many flagpoles are there in front of the Esperia Hotel?</p>
+            <p class="clue__text">How many flagpoles stand in front of the Esperia Hotel?</p>
             <div class="answers-container">
-                <p>1 ➡ </p>
-                <p>3 ➡ </p>
-                <p>4 ➡ </p>
-                <p>5 ➡ ok </p>
+                <p>1 ➡ b</p>
+                <p>3 ➡ s</p>
+                <p>4 ➡ q</p>
+                <p>5 ➡ t </p>
             </div>
         </div>
         <div class="clue hide" id="clue-9">
             <h4>Clue 9</h4>
             <p class="clue__location">Location: In front of the Aegean Bay Hotel</p>
-            <p class="clue__text">How many windows does the top floor of the Aegean Bay Hotel have?</p>
+            <p class="clue__text">How many windows are there on the top floor of the Aegean Bay Hotel?</p>
             <div class="answers-container">
-                <p>8 ➡ </p>
-                <p>12 ➡ </p>
-                <p>14 ➡ </p>
-                <p>16 ➡ ok</p>
+                <p>8 ➡ y</p>
+                <p>12 ➡ j</p>
+                <p>14 ➡ g</p>
+                <p>16 ➡ i</p>
             </div>
         </div>
         <div class="clue hide" id="clue-10">
             <h4>Clue 10</h4>
             <p class="clue__location">Location: Bus stop next to Mythos bar</p>
-            <p class="clue__text">What street name is written on the green sign at the bus stop?</p>
+            <p class="clue__text">What street name is displayed on the green sign at the bus stop?</p>
             <div class="answers-container">
-                <p>MARMAROU ➡ </p>
-                <p>IRELOCHITON ➡ </p>
-                <p>PALEPLOGOU ➡ </p>
-                <p>MAKARIOU ➡ </p>
+                <p>MARMAROU ➡ z</p>
+                <p>IRELOCHITON ➡ s</p>
+                <p>PALEOLOGOU ➡ o</p>
+                <p>MAKARIOU ➡ a</p>
             </div>
         </div>
-       
-        
-       
-        
-        
-        
+         
     </div>
 
     <button id="button-continue2">Continue</button>
 </section>
 
 
-<section id="game-part2" class="hide-game">
+<section id="game-part2" class="section-end-code ">
     <h2 class="small-margin" id="title-chest">You found the chest!</h2>
+    <p id="message-winner"></p>
     <form id="form-end-code" >
-        <p>If you have found all the clues, enter the code and try to open the chest.</p>
+        <p>If you've found all the clues, enter the code and see if you can open the chest!</p>
         <div class="end-code-container">
             <label id="">  <input type="text" class="end-code" id="" placeholder="1" maxlength="1">   </label>
             <label id="">  <input type="text" class="end-code" id="" placeholder="2" maxlength="1">   </label>
@@ -211,7 +207,7 @@ title: Kos Treasure Hunt | Marmari Play
             <label id="">  <input type="text" class="end-code" id="" placeholder="10" maxlength="1">   </label>
         </div>
         <button class="" type="submit" id="button-end-code">Check code</button>
-        <br>
+        <p id="message-end-code"></p>       
     </form>
 
 
@@ -224,6 +220,6 @@ title: Kos Treasure Hunt | Marmari Play
 
 
 <!-- Java Script pro hru -->
-<script src="/script.js"></script>
+<script src="/script-marmari.js"></script>
 
 

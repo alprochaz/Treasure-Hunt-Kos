@@ -12,6 +12,10 @@
     }
 }
 
+.faq h1 { 
+    color: white;
+}
+
 .blue-container {
     background-color: colors.$primary-transparent;
     padding: 30px 20px;
@@ -21,8 +25,8 @@
 
 .question {
     font-weight: 600;
-    font-size: 1.2em;
     margin: 0;
+    text-decoration: underline;
 
 }
 
