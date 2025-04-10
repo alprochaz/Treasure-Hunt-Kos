@@ -18,6 +18,11 @@ module.exports = function(eleventyConfig) {
 
   // Poslani favicon - zatim jen testuji
   eleventyConfig.addPassthroughCopy("favicon.ico"); 
+  eleventyConfig.addPassthroughCopy("android-chrome-192x192.png"); 
+  eleventyConfig.addPassthroughCopy("android-chrome-512x512.png"); 
+
+  // Zkopirovat webmanifest
+  eleventyConfig.addPassthroughCopy("site.webmanifest");
 
   return {
     // možné formáty šablon
