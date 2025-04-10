@@ -1,7 +1,7 @@
 // Script pro hru Marmari
 
 //Moje reseni s frontendovou kontrolou kodu, coz neni idealni
-const allCodes = ["1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888"]
+const allCodes = ["1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888", "2486"]
 const GameStartEl = document.querySelector('#game-start')
 
 document.querySelector("#form-check-code").addEventListener("submit", (e) => {     // reaguji na spusteni formulare udalost "submit"
@@ -174,8 +174,8 @@ buttonContinue2.addEventListener('click', () => {
 })
 
 
-// Kontrola zaverecneho kodu - jeste provizovni 👀 staci zadat prvni 3:  a b c
-const allClueCodes = ["A", "B", "C", "", "", "", "", "", "", ""]
+// Kontrola zaverecneho kodu 
+const allClueCodes = ["G", "O", "U", "R", "N", "I", "A", "T", "I", "S"]
 
 document.querySelector("#form-end-code").addEventListener("submit", (e) => { 
     e.preventDefault()  
@@ -190,14 +190,13 @@ document.querySelector("#form-end-code").addEventListener("submit", (e) => {
             rightCode++
         }
         else {
-            console.log(i + " je spatne")
+            // console.log(i + " je spatne")
             item.style.background = "#f32b2b"
         }
         i++
     })
 
     if (rightCode === allClueCodes.length) {
-        console.log("Vyhral jsi")
         document.querySelector('#treasure-chest').classList.remove('hide')
         document.querySelector('#form-end-code').classList.add('hide')
         document.querySelector('#title-chest').innerText = "Congratulations! "
