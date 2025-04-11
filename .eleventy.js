@@ -21,8 +21,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("android-chrome-192x192.png"); 
   eleventyConfig.addPassthroughCopy("android-chrome-512x512.png"); 
 
-  // Zkopirovat webmanifest
+  // Zkopirovat webmanifest, sitemap
   eleventyConfig.addPassthroughCopy("site.webmanifest");
+  eleventyConfig.addPassthroughCopy("sitemap.xml");
 
   return {
     // možné formáty šablon
