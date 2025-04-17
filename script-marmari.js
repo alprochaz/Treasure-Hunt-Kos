@@ -85,6 +85,7 @@ function selectAnswer(e) {
     Array.from(optionsElement.children).forEach(btn => btn.style.backgroundColor = "");
 
     selectedAnswer = e.target;
+    console.log(selectedAnswer)
 
 }
 
