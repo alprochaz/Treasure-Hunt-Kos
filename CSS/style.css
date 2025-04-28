@@ -671,6 +671,16 @@ button {
   margin: 0px;
 }
 
+.go-back-to-clues {
+  display: inline;
+  width: auto;
+  padding-inline: 0px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  background-color: white;
+  color: #2272ce;
+}
+
 @media screen and (min-width: 760px) {
   .section-end-code {
     padding-inline: 100px;

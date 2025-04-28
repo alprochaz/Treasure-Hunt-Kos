@@ -175,6 +175,13 @@ buttonContinue2.addEventListener('click', () => {
 })
 
 
+// Button Go back to clues
+const buttonGoBackToClues = document.querySelector('#go-back-to-clues')
+buttonGoBackToClues.addEventListener('click', () => {
+    document.querySelector('#game-part1').classList.remove('hide-game')
+    document.querySelector('#game-part2').classList.add('hide-game')
+})
+
 // Kontrola zaverecneho kodu 
 const allClueCodes = ["G", "O", "U", "R", "N", "I", "A", "T", "I", "S"]
 
