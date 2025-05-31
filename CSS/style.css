@@ -110,7 +110,8 @@ h2 {
   margin-top: 2.4em;
 }
 
-.how-to-play {
+.how-to-play,
+.blue-section {
   background-color: #2272ce;
   color: white;
 }
