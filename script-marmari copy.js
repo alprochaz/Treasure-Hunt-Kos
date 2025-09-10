@@ -51,83 +51,84 @@ const quizData = [
         options: ["Rhodos", "Naxos", "Kalymnos", "Crete"],
         answer: "Kalymnos"
     },
-];
 
+];
+  
 const questionElement = document.getElementById("quiz-question");
 const optionsElement = document.getElementById("quiz-options");
 const submitButton = document.getElementById("submit-button");
 const messageElement = document.getElementById("quiz__message");
 
 let currentQuestion = 0;
-let selectedAnswer = null;
-
+let selectedAnswer = null
+  
 function showQuestion() {
     const question = quizData[currentQuestion];
     questionElement.innerText = question.question;
 
     optionsElement.innerHTML = "";
-    messageElement.innerText = "";  // Reset zprávy
+    messageElement.innerText = ""; // Reset zprávy
 
     // Vytvoreni buttonu s odpovedmi
     question.options.forEach(option => {
-        const button = document.createElement("button");
-        button.innerText = option;
-        button.classList.add("quiz__option"); // Přidáme třídu pro styling
-        button.addEventListener("click", selectAnswer);
-        optionsElement.appendChild(button);
+      const button = document.createElement("button");
+      button.innerText = option;
+      button.classList.add("quiz__option"); // Přidáme třídu pro styling
+      button.addEventListener("click", selectAnswer);      
+      optionsElement.appendChild(button);      
     });
 }
-
+ 
 function selectAnswer(e) {
-    // Reset stylů - barev všech tlačítek
+    // Reset barev všech tlačítek
     Array.from(optionsElement.children).forEach(btn => btn.style.backgroundColor = "");
 
-    selectedAnswer = e.target.innerText;    // Uložíme jen text odpovědi 👀 puvodne bez innerText - zlobilo v Safari
-    e.target.style.backgroundColor = "#ddd";    // Zvýrazníme vybranou možnost
+    selectedAnswer = e.target;
+    console.log(selectedAnswer)
+
 }
 
 function checkAnswer() {
-    if (!selectedAnswer) return;    // Pokud není odpověď vybraná, nic nedělej
+    if (!selectedAnswer) return; // Pokud není odpověď vybraná, nic nedělej
 
-    const correctAnswer = quizData[currentQuestion].answer;
+    const corectAnswer = quizData[currentQuestion].answer;  
+    if (selectedAnswer.innerText === corectAnswer) {
+        const partId = `map-part${currentQuestion + 1}`;    // Sestavení ID části mapy napr. map-part1 👀👀
+        document.getElementById(partId).classList.remove('hide-map');      
 
-    const normalize = str => str.trim().toLowerCase().normalize();  // aby se nize porovnavali opravdu 2 stejne veci - zlobilo v Safari
-
-    if (normalize(selectedAnswer) === normalize(correctAnswer)) {
-        const partId = `map-part${currentQuestion + 1}`;
-        document.getElementById(partId).classList.remove('hide-map');
-
-        messageElement.innerText = "Great, you got a part of the map!";
+        messageElement.innerText = "Great, you got a part of the map!"; // Hláška při správné odpovědi
         messageElement.style.color = "green";
 
         currentQuestion++;
-
+    
         setTimeout(() => {
             if (currentQuestion < quizData.length) {
                 showQuestion();
             } else {
                 showResult();
             }
-        }, 1200);   // Po 1.2s přejde na další otázku
+        }, 1200); // Po 1.2s přejde na další otázku
 
     } else {
+        console.log("wrong answer")
+        selectedAnswer.style.backgroundColor = "red"; // Podbarvení špatné odpovědi
         messageElement.innerText = "Wrong answer, try again!";
         messageElement.style.color = "red";
     }
 }
-
+ 
 function showResult() {
-    document.querySelector('#quiz-title').innerHTML = "Well played";
+    document.querySelector('#quiz-title').innerHTML = "Well played"
     questionElement.innerHTML = `
         <p>You've got your map. Now you can continue your adventure!</p>
-    `;
-    document.querySelector('#lets-start').style.display = "none";
+        `;
+    document.querySelector('#lets-start').style.display = "none"
     optionsElement.innerHTML = "";  // Vyčistíme možnosti
-    submitButton.style.display = "none";    // Skryjeme tlačítko po dokončení
+    submitButton.style.display = "none";  // Skryjeme tlačítko po dokončení
     messageElement.innerHTML = "";
-    buttonContinue1.disabled = false; // Odebere buttonu pro pokracovani disabled, aby se na nej mohlo kliknout
+    buttonContinue1.disabled = false;       // Odebere buttonu pro pokracovani disabled, aby se na nej mohlo kliknout
 }
-
+ 
 submitButton.addEventListener('click', checkAnswer);
 showQuestion();
 // konec kvizu ***************************************************************************************************************************
