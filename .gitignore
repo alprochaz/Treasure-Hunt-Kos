@@ -1,3 +1,6 @@
 node_modules/
 .vscode/
 _site/
+CZ/
+script-marmari-test.js
+puvodni-kviz.txt

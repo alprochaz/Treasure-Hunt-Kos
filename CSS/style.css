@@ -12,6 +12,10 @@ body {
   margin: 0;
   font-size: 20px;
   font-family: "Urbanist", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media screen and (min-width: 960px) {
   body {
@@ -49,8 +53,8 @@ section {
 h1 {
   font-size: 2.6em;
   margin-top: 0;
-  margin-bottom: 40px;
-  color: white;
+  margin-bottom: 20px;
+  color: #111111;
   text-align: center;
   line-height: 1.25em;
 }
@@ -90,7 +94,7 @@ h2 {
 .button {
   display: inline-block;
   text-decoration: none;
-  margin-top: 2.4em;
+  margin-top: 1em;
   padding: 10px 30px;
   border-radius: 20px;
   border: 0px;
@@ -99,11 +103,16 @@ h2 {
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   line-height: normal;
-  background-color: rgb(34, 114, 206);
+  background-color: #2272ce;
 }
 
-.how-to-play {
-  background-color: rgb(34, 114, 206);
+.button--hero {
+  margin-top: 2.4em;
+}
+
+.how-to-play,
+.blue-section {
+  background-color: #2272ce;
   color: white;
 }
 
@@ -311,6 +320,7 @@ header {
 .blue-card__title {
   margin-top: 0;
   margin-bottom: 60px;
+  color: white;
 }
 .blue-card__description {
   font-size: 32px;
@@ -346,8 +356,7 @@ header {
 }
 
 .choose-game__title {
-  color: #111111;
-  margin-bottom: 60px;
+  font-size: 2em;
 }
 .choose-game__container {
   display: grid;
@@ -374,14 +383,24 @@ header {
   justify-content: space-between;
 }
 .game__title {
-  font-size: 2.7em;
+  font-size: 2.4em;
   margin-block: 0;
+}
+.game__icon::before {
+  content: "";
+  display: block;
+  height: 140px;
+  background-image: url(/images/icons/hercules.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 .game__description {
   background-color: #7F6F65;
 }
 .game__text {
-  margin-block: 0.5em;
+  padding: 0.5em;
+  margin: 0;
 }
 .game--marmari {
   background-image: url(/images/foto/marmari-desktop.jpg);
@@ -390,6 +409,12 @@ header {
 .game--kardamena {
   background-image: url(/images/foto/kardamena-desktop.jpg);
   background-position: center;
+}
+.game--kardamena .game__title::after {
+  content: "Coming soon – still in development!";
+  background-color: #F44336;
+  display: block;
+  font-size: 16px;
 }
 @media screen and (min-width: 960px) {
   .game--big {
@@ -414,12 +439,40 @@ header {
 
 /*------------------- Marmari a Kardamena-------------------*/
 .about-game__title {
-  text-align: left;
-  color: #111111;
+  font-size: 2em;
 }
 
-.about-game__intro {
-  margin-bottom: 40px;
+.hercules-icon::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  background-image: url(/images/icons/hercules.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.buy-game-button {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  text-align: center;
+}
+
+.play-game {
+  background-image: url(/images/foto/marmari-pastel.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 60px 20px;
+}
+
+.play-game__button {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 20px auto;
 }
 
 .info-container {
@@ -438,6 +491,7 @@ header {
   align-items: center;
   gap: 20px;
 }
+
 .photo-gallery {
   display: grid;
   gap: 20px;
@@ -454,6 +508,220 @@ header {
   max-width: 500px;
 }
 
+/*------------------- Play a game -------------------*/
+button {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  margin-top: 1em;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0px;
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  line-height: normal;
+  background-color: #2272ce;
+}
+
+:disabled {
+  opacity: 50%;
+}
+
+.hide-game,
+.hide {
+  display: none;
+}
+
+.section-code {
+  background-image: url(/images/treasure/chest-beach-opacity85.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 90vh;
+}
+@media screen and (min-width: 760px) {
+  .section-code {
+    background-image: url(/images/treasure/chest-beach-opacity85-PC.jpg);
+    padding-inline: 100px;
+    padding-top: 60px;
+  }
+}
+
+.section-code h1 {
+  color: white;
+}
+
+.code-input {
+  font-size: 0.8em;
+}
+
+.message-code-check {
+  margin: 0;
+  text-shadow: 0px 0px 9px rgb(255, 255, 255), -12px 2px 18px rgb(255, 255, 255), -2px 10px 15px rgb(255, 255, 255), -5px -14px 13px rgb(255, 255, 255), -15px 5px 20px rgb(255, 255, 255);
+}
+
+.small-margin {
+  margin-bottom: 20px;
+}
+
+.treasure-map-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.treasure-map {
+  width: 100%;
+}
+
+.hide-map {
+  /* display: none; !!! pak se kousku nedrzi misto a nefunguje spravne! */
+  /* visibility: hidden; */
+  opacity: 0.06;
+}
+
+.map-part {
+  display: block;
+  width: 100%;
+}
+
+.quiz {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #bef1c5;
+  border-radius: 5px;
+}
+
+.quiz__question {
+  margin-bottom: 20px;
+}
+
+.quiz__options {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.quiz__options button {
+  margin-top: 0px;
+  background-color: white;
+  color: black;
+  border: 1px solid lightgray;
+}
+
+.quiz__options button:active,
+.quiz__options button:focus {
+  background-color: lightgray;
+}
+
+.quiz__submit {
+  width: 100%;
+  background-color: #33b249;
+}
+
+.quiz__message {
+  margin: 0;
+}
+
+.clue-number-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-block: 20px;
+}
+
+.clue-number {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.clue-number:active,
+.clue-number:focus,
+.clue-number-first {
+  background-color: #e6007e;
+}
+
+.clue {
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.clue h4 {
+  margin: 0px;
+}
+
+.clue__location {
+  margin: 0;
+}
+
+.clue__text {
+  margin-top: 0.5em;
+}
+
+.answers-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 10px;
+  justify-items: center;
+}
+
+.answers-container p {
+  margin: 0px;
+}
+
+.go-back-to-clues {
+  display: inline;
+  width: auto;
+  padding-inline: 0px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  background-color: white;
+  color: #2272ce;
+}
+
+@media screen and (min-width: 760px) {
+  .section-end-code {
+    padding-inline: 100px;
+  }
+}
+
+.end-code-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-block: 40px;
+}
+
+.end-code-container input[type=text] {
+  font-weight: 700;
+  font-size: 1.2em;
+  padding: 10px;
+  text-align: center;
+  background: radial-gradient(circle, rgb(242, 238, 91) 40%, rgb(203, 149, 127) 100%);
+}
+@media screen and (min-width: 760px) {
+  .end-code-container input[type=text] {
+    width: 80px;
+  }
+}
+
+.end-code-container input::-moz-placeholder {
+  text-align: center;
+  font-weight: normal;
+}
+
+.end-code-container input::placeholder {
+  text-align: center;
+  font-weight: normal;
+}
+
+.treasure-chest {
+  width: 100%;
+}
+
 .faq {
   display: flex;
   flex-direction: column;
@@ -467,6 +735,10 @@ header {
   }
 }
 
+.faq h1 {
+  color: white;
+}
+
 .blue-container {
   background-color: rgba(34, 114, 206, 0.7);
   padding: 30px 20px;
@@ -476,8 +748,8 @@ header {
 
 .question {
   font-weight: 600;
-  font-size: 1.2em;
   margin: 0;
+  text-decoration: underline;
 }
 
 .answer {
@@ -488,7 +760,12 @@ header {
   margin-top: 20px;
 }
 
-.contact {
+.min-height85vh {
+  min-height: 85vh;
+}
+
+.contact,
+.contact-title {
   color: white;
 }
 
@@ -512,7 +789,6 @@ input[type=text], input[type=email], textarea {
   border-radius: 17px;
   display: block;
   box-sizing: border-box;
-  font-size: 0.8em;
   font-family: "Urbanist", sans-serif;
 }
 
@@ -520,6 +796,11 @@ input[type=text], input[type=email], textarea {
   input[type=text], input[type=email] {
     width: 300px;
   }
+}
+
+.form-field input,
+.form-field textarea {
+  font-size: 0.8em;
 }
 
 label {
@@ -535,7 +816,7 @@ textarea {
 
 input[type=text]:focus, input[type=email]:focus, textarea:focus { /*aktivni pole se zabarvi*/
   background-color: #eee;
-  outline: 2px solid rgb(34, 114, 206);
+  outline: 2px solid #2272ce;
 }
 
 .email {
@@ -579,7 +860,7 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus { /*aktivni pole
 }
 .icon-svg {
   width: 60px;
-  fill: rgb(34, 114, 206);
+  fill: #2272ce;
   animation: shake 4s;
   animation-iteration-count: infinite;
   transition-property: fill;
