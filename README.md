@@ -1,7 +1,8 @@
 # Treasure-Hunt-Kos
-Závěrečný projekt pro Czechitas
+Původně Závěrečný projekt pro Czechitas, nyní plnohodnotný web
 
-Web na adrese: https://treasure-hunt-kos.netlify.app/
+Web původně na adrese: https://treasure-hunt-kos.netlify.app/ 
+Nyní na doméně: https://treasure-hunt-kos.com
 
 
 
