@@ -1,7 +1,7 @@
 {
   "name": "treasure-hunt-kos",
   "version": "1.0.0",
-  "description": "Závěrečný projekt pro Czechitas",
+  "description": "Game Treasure Hunt Kos",
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy",

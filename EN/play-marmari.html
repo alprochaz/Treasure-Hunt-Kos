@@ -3,11 +3,13 @@ layout: main-template-EN.njk
 title: Kos Treasure Hunt | Marmari Play Game
 ---
 <!-- styly jsou v games.scss -->
+
+<!-- KONTROLA VSTUPNIHO KODU -->
 <section id="section-code" class="section-code">
     <h1 class="small-margin">Marmari</h1> 
     <!-- lze upravit v allCodes nebo pro backendove reseni: server.js -->
     <form id="form-check-code">            
-        <!-- Melo by fungovat: ["1111", "2222", "3333" az "8888"] -->
+        <!-- Melo by fungovat: ["1111", "2222", "3333" az "8888 atd"] -->
         <p>To begin the game, enter the code sent to your email.  </p>
         <label id="code-label">  <input type="text" class="code-input" id="code-input" placeholder="Enter your code" maxlength="4">             
         </label>
@@ -18,7 +20,7 @@ title: Kos Treasure Hunt | Marmari Play Game
 
 </section>
 
-
+<!-- UVODNI QUIZ -->
 <section id="game-start" class="hide-game">
     <div id="lets-start">
         <h2 class="small-margin">Let's start</h2> 
