@@ -1,0 +1,301 @@
+---
+layout: main-template-EN.njk
+title: Kos Treasure Hunt | Tigaki Play Game
+---
+<!-- styly jsou v games.scss -->
+
+<!-- KONTROLA VSTUPNIHO KODU -->
+<section id="section-code" class="section-code">
+    <h1 class="small-margin">The White Gold of Tigaki</h1> 
+    <!-- lze upravit v allCodes nebo pro backendove reseni: server.js -->
+    <form id="form-check-code">            
+        <!-- Melo by fungovat: [licha cisla viz script"] -->
+        <p>To begin the game, enter the 4-digit code you received after purchasing the game.  </p>
+        <label id="code-label">  <input type="text" class="code-input" id="code-input" placeholder="Enter your code" maxlength="4">             
+        </label>
+        <p class="message-code-check" id="message-code-check"></p>
+        
+        <button type="submit" id="button-check-code">Check code</button>
+    </form>
+
+</section>
+
+<!-- UVODNI QUIZ na odkryti mapy -->
+<section id="game-start" class="hide-game">
+    <div id="lets-start">
+        <h2 class="small-margin" id="lets-start-title">Unlock Your Map</h2> 
+        <p id="lets-start-info">Answer a few opening questions to unlock your map and begin the search for the white gold of Tigaki.</p>
+    </div>
+    <!--Quiz:   -->
+    <div class="quiz-tigaki">
+        <div class="quiz-tigaki__box">
+            <div class="quiz-tigaki__question" data-correct="A">
+                    <p><strong> 1. What made salt so important for traders in the past? </strong></p>
+                    <div class="quiz-tigaki__container">
+                        <button class="quiz-tigaki__button">A) It could preserve food for long journeys</button>
+                        <button class="quiz-tigaki__button">B) It was used to decorate buildings</button>
+                        <button class="quiz-tigaki__button">C) It was used as fuel</button>
+                        <button class="quiz-tigaki__button">D) It could clean drinking water</button>
+                    </div>
+                    <div class="quiz-tigaki__message"></div>                    
+            </div>
+            <img class="quiz-tigaki__map-part" id="tigaki__map-part1" src="/images/map/tigaki/3parts/tigaki-map-part1.jpg" alt="map">
+        </div>
+
+        <div class="quiz-tigaki__box">
+            <div class="quiz-tigaki__question" data-correct="B">
+                    <p><strong> 2. What is the name of the salt lake near Tigaki? </strong></p>
+                    <div class="quiz-tigaki__container">
+                        <button class="quiz-tigaki__button">A) Psalidi</button>
+                        <button class="quiz-tigaki__button">B) Alykes</button>
+                        <button class="quiz-tigaki__button">C) Kefalos</button>
+                        <button class="quiz-tigaki__button">D) Salina</button>
+                    </div>
+                    <div class="quiz-tigaki__message"></div>                    
+            </div>
+            <img class="quiz-tigaki__map-part" id="tigaki__map-part2" src="/images/map/tigaki/3parts/tigaki-map-part2.jpg" alt="map">
+        </div>
+
+        <div class="quiz-tigaki__box">
+            <div class="quiz-tigaki__question" data-correct="C">
+                    <p><strong> 3. Which animals are often seen at the salt lake in Tigaki? </strong></p>
+                    <div class="quiz-tigaki__container">
+                        <button class="quiz-tigaki__button">A) Dolphins</button>
+                        <button class="quiz-tigaki__button">B) Goats</button>
+                        <button class="quiz-tigaki__button">C) Flamingos</button>
+                        <button class="quiz-tigaki__button">D) Turtles</button>
+                    </div>
+                    <div class="quiz-tigaki__message"></div>                    
+            </div>
+            <img class="quiz-tigaki__map-part" id="tigaki__map-part3" src="/images/map/tigaki/3parts/tigaki-map-part3.jpg" alt="map">
+        </div>
+        <p class="hide" id="tigaki-map-message">Congratulation. You got the map! 🎉 <br>
+            Your treasure hunt starts now. Click continue to uncover the clues.
+        </p>        
+    </div>
+
+      
+    <!-- pokracovani ve hre je disabled -> button se aktivuje, az po skonceni kvizu -->
+    <button id="button-continue1" disabled>Continue</button>
+
+</section>
+
+
+<!-- Otazky a ukoly s mapou -->
+<section id="game-part1" class="hide-game">
+    <h2 class="small-margin">Treasure Hunt Map & Clues</h2>
+    <p>Follow the map and visit all 11 locations marked on it. You can start anywhere and visit the places in any order. 
+        Click the location/clue number below the map to open it.<br>
+        At each location, answer the question and write down the number from the correct answer. 
+    </p>
+    <p>You will need all these numbers later to solve the final code.</p>
+    <img class="treasure-map" src="/images/map/tigaki/tigaki-map.jpg" alt="treasure map with clues">
+    <div class="clue-number-container">
+        <button class="clue-number clue-number-first" id="clue-number-first"> 1 </button>
+        <button class="clue-number"> 2 </button>
+        <button class="clue-number"> 3 </button>
+        <button class="clue-number"> 4 </button>
+        <button class="clue-number"> 5 </button>
+        <button class="clue-number"> 6 </button>
+        <button class="clue-number"> 7 </button>
+        <button class="clue-number"> 8 </button>
+        <button class="clue-number"> 9 </button>
+        <button class="clue-number"> 10 </button> 
+        <button class="clue-number"> 11 </button>       
+    </div>
+
+    <!-- 10 Clues: 1. je odkryte, ostatni se ukazou na kliknuti na cislo - E v a p o r a t i o n-->
+    <div>
+        <div class="clue" id="clue-1">
+            <h4>Clue 1</h4>
+            <p class="clue__location">Location: Hamam</p>
+            <p class="clue__text"><strong> What is written in large red letters on the chimney? </strong> <br>
+                Assign the correct number to each letter using the table below and add the numbers together.
+            </p>
+            <!-- tabulka s pismeny a cisly - tvori se v js -->
+            <div class="table-abc" id="tableAbc"></div>
+            <p><u> &nbsp &nbsp </u> + <u> &nbsp &nbsp </u> + <u> &nbsp &nbsp </u> + <u> &nbsp &nbsp </u> = <u> &nbsp &nbsp &nbsp </u>  </p>
+         
+        </div>
+        <div class="clue hide" id="clue-2">
+            <h4>Clue 2</h4>
+            <p class="clue__location">Location: Small island between the roads near the parking area</p>
+            <p class="clue__text"><strong>How many large trees are on the small island?</strong> <br>
+                 Choose one of the options below and write down the number.</p>
+            <div class="answers-container">
+                <p> 1 </p>
+                <p> 3 </p>
+                <p> 5 </p>
+                <p> 7 </p>
+            </div>
+        </div>            
+        <div class="clue hide" id="clue-3">
+            <h4>Clue 3</h4>
+            <p class="clue__location">Location: Red Information Board - Elma Train (on the sidewalk opposite Sevi Rent a Car)</p>
+            <p class="clue__text"><strong>Which train line goes to Tigaki?</strong> <br>
+                Count the letters in the correct answer and multiply the number by 3. Write down the result.
+            </p>            
+            <div class="answers-container">
+                <p> Blue </p>
+                <p> Green </p>
+                <p> Red </p>
+                <p> Yellow </p>
+            </div>
+        </div>
+        <div class="clue hide" id="clue-4">
+            <h4>Clue 4</h4>
+            <p class="clue__location">Location: ATM (cash machine) between King Size Bar and Sant Anna Beach Bar</p>
+            <p class="clue__text"><strong>What is the letter in the white circle on the ATM? </strong> <br>
+                Find the position of this letter in the alphabet and write down the number.
+                (For example A = 1, B = 2, C = 3…)
+            </p>
+            <div class="answers-container">
+                <p> A </p>
+                <p> M </p>
+                <p> E </p>
+                <p> B </p>
+            </div>
+        </div>
+        <div class="clue hide" id="clue-5">
+            <h4>Clue 5</h4>
+            <p class="clue__location">Location: Miniature church at the sidewalk next to Akti Dimis Hotel</p>
+            <p class="clue__text"><strong>How many towers does the miniature church have? </strong><br>
+                Choose one of the options below and write down the number.
+            </p>
+            <div class="answers-container">
+                <p> 1 </p>
+                <p> 2 </p>
+                <p> 3 </p>
+                <p> 4 </p>
+            </div>
+        </div>
+        <div class="clue hide" id="clue-6">
+            <h4>Clue 6</h4>
+            <p class="clue__location">Location: Sidewalk along the road by the beach</p>
+            <p class="clue__text"><strong>Which pattern repeats on the sidewalk? </strong> <br>
+                How many right angles &#8735; can you find in the pattern of the correct answer?
+            </p>
+            <div class="answers-container">
+                <p> ◯ ▽ ◯ </p>
+                <p> □ ▭ □  </p>
+                <p> ◇ ◯ ◇ </p>
+                <p> ◻ ▽ ◻ </p>
+                <!-- unicode kody, kdyby nahodou nefungovalo &#9634; &#9645;  &#9634; -->
+            </div>
+        </div>
+        <div class="clue hide" id="clue-7">
+            <h4>Clue 7</h4>
+            <p class="clue__location">Location: Plori Restaurant</p>
+            <p class="clue__text"> <strong>What animal can you see on the sign above the entrance (from the road) to the restaurant?</strong> <br>
+                Now find this animal below and follow its path. Which number does it reach? Write down the number.
+            </p>
+            <div>
+                <img class="clue__maze" src="/images/mazes/maze-animals.jpg" alt="animals maze">
+            </div>            
+        </div>
+        <div class="clue hide" id="clue-8">
+            <h4>Clue 8</h4>
+            <p class="clue__location">Location: Information board at the Salt Lake</p>
+            <p class="clue__text"><strong>What can be seen in the pictures on the board? </strong> <br>
+                Count the letters in the correct answer and write it down.
+            </p>
+            <div class="answers-container">
+                <p>Only birds 🐦‍⬛ </p>
+                <p>Only flowers 🌸 </p>
+                <p>Flowers and birds 🌸 🐦‍⬛ </p>
+                <p>Turtles and trees 🐢🌳  </p>
+            </div>
+        </div>
+        <div class="clue hide" id="clue-9">
+            <h4>Clue 9</h4>
+            <p class="clue__location">Location: Beach near the Salt Lake</p>
+            <p class="clue__text"><strong>What machine is standing near the water canal close to the shore?</strong> <br>
+             Find the correct answer below, then follow the path to a number and write it down.
+            </p>
+            <div>
+                <img class="clue__maze" src="/images/mazes/maze-excavator11.jpg" alt="excavater maze">
+            </div>  
+        </div>
+        <div class="clue hide" id="clue-10">
+            <h4>Clue 10</h4>
+            <p class="clue__location">Location: Vangelis Beach</p>
+            <p class="clue__text"><strong>What is the wooden half boat at the beach hut used for?</strong> <br>
+                Count the letters in the correct answer and write it down.</p>
+            <div class="answers-container">
+                <p>Playground for children </p>
+                <p>Library </p>
+                <p>Flower garden </p>
+                <p>Bar </p>
+            </div>
+        </div>  
+        <div class="clue hide" id="clue-11">
+            <h4>Clue 11</h4>
+            <p class="clue__location">Location: Sidewalk in front of Tropical Sol Hotel</p>
+            <p class="clue__text"><strong> What color is the mailbox? </strong> <br>
+                Count the letters in the correct answer and write it down.
+            </p>
+            <div class="answers-container">
+                <p>White </p>
+                <p>Blue </p>
+                <p>Yellow </p>
+                <p>Red </p>
+            </div>
+        </div>
+
+    </div>
+    <p>Once you have visited all the locations and found the correct answers, continue to the next step to reveal the final code.</p>
+    <!-- button continue z mapy na vylusteni a zadavani kodu -->
+    <button id="button-continue2">Continue</button>
+</section>
+
+
+<section id="game-part2" class="section-end-code hide-game">
+    <button id="go-back-to-clues" class="go-back-to-clues"> ◀ Go back</button>
+    <h2 class="small-margin" id="title-chest">Welcome to the end!</h2>
+    <div id="chifre-end-code">
+        <p>If you have answered all the questions and written down the correct number for each one, match each number
+            with a letter using the table below, in order. <br>
+            This will give you the answer to the question: <br>
+            <strong>On what principle was salt produced in the saline?</strong>
+        </p>
+        
+        <!-- tabulka s cisly a pismeny - tvori se v js -->
+        <div class="table-game-code" id="table-game-code"></div>
+    </div>
+
+
+
+
+    <p id="message-winner"></p>
+    <form id="form-end-code" >
+        <p>Enter your answer as a code in the boxes below and find out if you have uncovered the secret of the white gold of Tigaki.</p>
+        <div class="end-code-container">
+            <label id="">  <input type="text" class="end-code" id="" placeholder="1" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="2" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="3" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="4" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="5" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="6" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="7" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="8" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="9" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="10" maxlength="1">   </label>
+            <label id="">  <input type="text" class="end-code" id="" placeholder="11" maxlength="1">   </label>
+        </div>
+        <button class="" type="submit" id="button-end-code">Check code</button>
+        <p id="message-end-code"></p>       
+    </form>
+
+
+
+
+    <img class="treasure-chest hide" id="treasure-chest" src="/images/treasure/treasure-chest-beach.gif" alt="treasure chest opening">
+    
+</section>
+
+
+
+<!-- Java Script pro hru ❗ musi se pridat do eleventy.js ❗ -->
+<script src="/script-tigaki.js"></script>
+
+

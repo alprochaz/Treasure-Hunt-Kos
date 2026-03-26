@@ -61,6 +61,11 @@
         background-image: url(/images/foto/marmari-desktop.jpg);
         background-position: center;
     }
+
+    &--tigaki {
+        background-image: url(/images/foto/tigaki.jpg);
+        background-position: center;
+    }
     
     &--kardamena {
         background-image: url(/images/foto/kardamena-desktop.jpg);
@@ -103,9 +108,6 @@
 
 
 
-
-
-
 /*------------------- Marmari a Kardamena-------------------*/
 .about-game__title {
     font-size: 2em;
@@ -122,18 +124,6 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-
-// .hercules-icon::before {
-//     content: "";
-//     display: inline-block;
-//     width: 40px;
-//     height: 40px;
-//     margin-right: 10px;
-//     background-image: url(/images/icons/hercules.png);
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//     background-position: center;
-// }
 
 .buy-game-button {
     display: block;
@@ -209,6 +199,7 @@ button {
 	font-family: "Montserrat", sans-serif;
     line-height: normal;
 	background-color: colors.$primary;
+    cursor: pointer;
 
 }
 
@@ -345,19 +336,26 @@ button {
     border: 2px solid lightgray;
     border-radius: 10px;
     padding: 20px;
+
+    &__location {
+        margin: 0;
+    }
+    
+    &__text {
+        margin-top: 0.5em;
+    }
+
+    &__maze {
+        width: 100%;
+    }
 }
 
 .clue h4 {
     margin: 0px;
 }
 
-.clue__location {
-    margin: 0;
-}
 
-.clue__text {
-    margin-top: 0.5em;
-}
+
 
 .answers-container {
     display: grid;
@@ -417,89 +415,100 @@ button {
 }
 
   
-//   button {
-//     display: block;
-//     margin: 0 auto;
-//     padding: 10px 20px;
-//     background-color: lightseagreen;
-//     color: #131313;
-//     border: none;
-//     border-radius: 5px;
-//     cursor: pointer;
-//   }
+
+// Tigaki game
+.table-abc,
+.table-game-code {
+  display:flex;
+  flex-wrap:wrap;
+  max-width:900px;
+  margin:auto;
+  font-family:Arial, sans-serif;
+  gap: 6px 0px;
+}
+
+.column-abc {
+  display:flex;
+  flex-direction:column;
+  width:26px;
+}
+
+.cell-abc {
+  border:1px solid #333;
+  text-align:center;
+  padding:4px 0;
+  font-size:14px;
+}
+
+.column-game-code {
+  display:flex;
+  flex-direction:column;
+  min-width:40px;
+}
+
+.cell-game-code {
+  border:1px solid #2272ce;
+  text-align:center;
+  padding:8px;
   
-//   button:hover {
-//     background-color: #8f8d8d;
-//   }
+  
+}
+
+// uvodni Quiz Tigaki
+.quiz-tigaki {
+    &__question{
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    &__map-part{
+        display: block;
+        width: 100%;
+        opacity: 0.5;
+        filter:blur(5px);
+        transition: 0.5s;
+    }
+    
+    &__container {
+        display: grid;
+        justify-items: center;
+        gap: 10px;
+
+        @media screen and (min-width: 960px) {    
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__button{
+        display: block;
+        font-size: 0.8em;
+        width: 100%;
+        margin: 0;
+        transition: 0.3s;
+        background-color: white;
+        color: black;
+        border: 2px solid #2272ce
+        
+    }
+
+    &__message{
+        font-size: 14px;
+        color: red;
+        margin-top: 5px;
+    }
+    /* odkrytí  casti mapy */
+    &__revealed{
+        opacity:1;
+        filter:none;
+    }
+
+}
 
 
 
-// od AI --------------------------------- nutne probrat
-// #quiz-container {
-//     max-width: 400px;
-//     margin: auto;
-//     background: white;
-//     padding: 20px;
-//     border-radius: 10px;
-//     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+// button:hover{
+//   background-color: #f0f0f0;
 // }
-// .map-part2 {
-//     display: none;
-//     width: 80px;
-//     height: 80px;
-//     background-color: lightblue;
-//     margin: 10px auto;
-//     border-radius: 5px;
-// }
-// .message {
-//     font-weight: bold;
-//     margin-top: 5px;
-//     text-align: center;
-// }
-// .correct {
-//     color: green;
-// }
-// .wrong {
-//     color: red;
-// }
-// .option {
-//     display: block;
-//     padding: 15px;
-//     background-color: #f0f0f0;
-//     margin: 5px 0;
-//     border-radius: 5px;
-//     cursor: pointer;
-//     text-align: center;
-//     transition: background 0.3s, border 0.3s;
-// }
-// .option:hover {
-//     background-color: #e0e0e0;
-// }
-// .selected {
-//     border: 2px solid #000;
-//     background-color: #d3d3d3;
-// }
-// .correct-answer {
-//     background-color: lightgreen !important;
-//     border: 2px solid green !important;
-// }
-// .wrong-answer {
-//     background-color: lightcoral !important;
-//     border: 2px solid red !important;
-// }
-// button {
-//     display: block;
-//     width: 100%;
-//     padding: 10px;
-//     margin-top: 10px;
-//     background-color: #007bff;
-//     color: white;
-//     border: none;
-//     border-radius: 5px;
-//     cursor: pointer;
-//     transition: background 0.3s;
-// }
-// button:hover {
-//     background-color: #0056b3;
-// }
+
 

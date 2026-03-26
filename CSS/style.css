@@ -406,6 +406,10 @@ header {
   background-image: url(/images/foto/marmari-desktop.jpg);
   background-position: center;
 }
+.game--tigaki {
+  background-image: url(/images/foto/tigaki.jpg);
+  background-position: center;
+}
 .game--kardamena {
   background-image: url(/images/foto/kardamena-desktop.jpg);
   background-position: center;
@@ -523,6 +527,7 @@ button {
   font-family: "Montserrat", sans-serif;
   line-height: normal;
   background-color: #2272ce;
+  cursor: pointer;
 }
 
 :disabled {
@@ -648,17 +653,18 @@ button {
   border-radius: 10px;
   padding: 20px;
 }
-
-.clue h4 {
-  margin: 0px;
-}
-
 .clue__location {
   margin: 0;
 }
-
 .clue__text {
   margin-top: 0.5em;
+}
+.clue__maze {
+  width: 100%;
+}
+
+.clue h4 {
+  margin: 0px;
 }
 
 .answers-container {
@@ -720,6 +726,85 @@ button {
 
 .treasure-chest {
   width: 100%;
+}
+
+.table-abc,
+.table-game-code {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  gap: 6px 0px;
+}
+
+.column-abc {
+  display: flex;
+  flex-direction: column;
+  width: 26px;
+}
+
+.cell-abc {
+  border: 1px solid #333;
+  text-align: center;
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+.column-game-code {
+  display: flex;
+  flex-direction: column;
+  min-width: 40px;
+}
+
+.cell-game-code {
+  border: 1px solid #2272ce;
+  text-align: center;
+  padding: 8px;
+}
+
+.quiz-tigaki__question {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.quiz-tigaki__map-part {
+  display: block;
+  width: 100%;
+  opacity: 0.5;
+  filter: blur(5px);
+  transition: 0.5s;
+}
+.quiz-tigaki__container {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+@media screen and (min-width: 960px) {
+  .quiz-tigaki__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.quiz-tigaki__button {
+  display: block;
+  font-size: 0.8em;
+  width: 100%;
+  margin: 0;
+  transition: 0.3s;
+  background-color: white;
+  color: black;
+  border: 2px solid #2272ce;
+}
+.quiz-tigaki__message {
+  font-size: 14px;
+  color: red;
+  margin-top: 5px;
+}
+.quiz-tigaki {
+  /* odkrytí  casti mapy */
+}
+.quiz-tigaki__revealed {
+  opacity: 1;
+  filter: none;
 }
 
 .faq {
