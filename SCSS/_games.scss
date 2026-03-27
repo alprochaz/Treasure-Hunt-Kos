@@ -134,10 +134,18 @@
 }
 
 .play-game {
-    background-image: url(/images/foto/marmari-pastel.jpg);
+
     background-position: center;
     background-size: cover;
     padding: 60px 20px;
+
+    &__marmari {
+        background-image: url(/images/foto/marmari-pastel.jpg);
+    }
+
+    &__tigaki {
+        background-image: url(/images/foto/tigaki-pastel.jpg);
+    }
 }
 
 .play-game__button {
