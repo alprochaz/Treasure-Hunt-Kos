@@ -230,8 +230,11 @@ document.querySelector("#form-end-code").addEventListener("submit", (e) => {
         document.querySelector('#chifre-end-code').classList.add('hide')
         document.querySelector('#go-back-to-clues').style.display = "none"
         document.querySelector('#title-chest').innerText = "Congratulations! "
-        document.querySelector('#message-winner').textContent = "Your answer is right!"
-        // scroll nahoru
+        document.querySelector('#message-winner').innerHTML = `
+            <p> You solved the secret code and opened the Tigaki treasure chest. </p>
+            <p><strong> Your reward code: ALYKES-567 </strong></p>
+            <p> Show this code at Alykes Restaurant to claim your treasure reward. </p>
+            `
         window.scrollTo({
             top: 0,
             behavior: "smooth"

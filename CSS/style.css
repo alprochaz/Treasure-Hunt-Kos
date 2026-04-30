@@ -732,6 +732,11 @@ button {
 .treasure-chest {
   width: 100%;
 }
+@media screen and (min-width: 760px) {
+  .treasure-chest {
+    width: 50%;
+  }
+}
 
 .table-abc,
 .table-game-code {
